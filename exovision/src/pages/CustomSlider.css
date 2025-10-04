@@ -1,0 +1,11 @@
+.no-hover-handle :where(.ant-slider-handle)::after,
+.no-hover-handle :where(.ant-slider-handle):hover::after,
+.no-hover-handle :where(.ant-slider:hover) .ant-slider-handle::after {
+    box-shadow: none !important;   /* removes the hover halo */
+}
+
+.no-hover-handle :where(.ant-slider-handle),
+.no-hover-handle :where(.ant-slider-handle:hover) {
+    transform: none !important;    /* prevents subtle grow on hover */
+    transition: none !important;   /* optional: no animation */
+}
