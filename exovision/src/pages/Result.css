@@ -1,0 +1,723 @@
+.ResultBody{
+    background: linear-gradient(180deg, #1A1A1A 0%, #000235 100%);
+    width: 1920px;
+    padding-bottom: 129px;
+}
+
+.ResultHeader{
+    width: 187.36627197265625px;
+    height: 63.069820404052734px;
+    margin-left: 99px;
+    padding-top: 37px;
+}
+
+.ResultSaveForm{
+    width: 1234px;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 83.83px;
+}
+
+.ResultSave{
+    width: 250px;
+    height: 53px;
+    border-radius: 100px;
+    gap: 10px;
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+
+    display: inline-block;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.ResultDiscovery{
+    width: 200px;
+    height: 47px;
+    border-width: 3px;
+    gap: 10px;
+    border: 3px solid transparent;
+    border-radius: 100px;
+    background-image: linear-gradient(rgba(26, 26, 26, 1), rgba(12, 12, 40, 1)), linear-gradient(to right, rgba(139, 137, 255, 1) 0%, rgba(115, 198, 228, 1) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display: inline-block;
+    margin-right: 20px;
+    overflow: hidden;
+} 
+
+.ResultSaveText{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(240, 240, 240, 1);
+
+    margin-top: 15px;
+}
+
+.ResultDiscoveryText{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 12px;
+} 
+
+.ResultMissionForm{
+    width: 1234px;
+    height: 306px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden
+}
+
+.ResultMissionTitle{
+    width: 1155px;
+    height: 45px;
+
+    font-family: Jura;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    background: linear-gradient(90deg, rgba(139, 137, 255, 1) 0%, rgba(115, 198, 228, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 30px;
+}
+
+.ResultMissionDetail{
+    width: 1155px;
+    height: 180px;
+
+    font-family: Jura;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    color: rgba(240, 240, 240, 1);
+    margin-top: 20px;
+}
+
+.ResultForm1{
+    width: 1234px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.ResultClassifyForm{
+    display: inline-block;
+    width: 604px;
+    height: 170px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ResultProbableForm{
+    display: inline-block;
+    width: 604px;
+    height: 170px;
+    text-align: center;
+    background: rgba(139, 137, 255, 0.15);
+    margin-left: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.ResultClassifyTitle{
+    height: 36px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 0 auto;
+    
+    color: rgba(240, 240, 240, 1);
+    margin-top: 21px;
+}
+
+.ResultClassifyDetail{
+    height: 60px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 0 auto;
+
+    background: linear-gradient(90deg, rgba(139, 137, 255, 1) 0%, rgba(115, 198, 228, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 11px;
+}
+
+.ResultProbableTitle{
+    height: 36px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    color: rgba(240, 240, 240, 1);
+    margin-top: 32px;
+}
+
+.ResultProbableDetail{
+    height: 60px;
+    
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    background: linear-gradient(90deg, rgba(255, 62, 8, 1) 0%, rgba(255, 187, 73, 1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 10px;
+}
+
+.ResultForm2{
+    width: 1234px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.Result2Box{
+    width: 200px;
+    height: 160px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background: rgba(139, 137, 255, 0.15);
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ResultConfidenceForm{
+    display: inline-block;
+    width: 604px;
+    height: 170px;
+    text-align: center;
+    background: rgba(139, 137, 255, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Result2Title{
+    width: auto;
+    height: 24px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    color: rgba(240, 240, 240, 1);
+    margin-top: 37px;
+}
+
+.Result2Detail{
+    width: auto;
+    height: 42px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 35px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 20px;
+}
+
+.ResultForm3{
+    width: 1234px;
+    height: 483px;
+    border-radius: 30px;
+    border-width: 0.71px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 0.71px solid var(--, rgba(136, 136, 136, 1));
+    background: var(--30, rgba(135, 135, 135, 0.3));
+    overflow: hidden;
+
+}
+
+.Result3Title{
+    width: auto;
+    height: 60px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 45px;
+    margin-left: 130px;
+}
+
+.Result3DetailForm{
+    height: 300px;
+    
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.Result3Detail{
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 35px;
+    line-height: 60px;
+    letter-spacing: 0%;
+
+    color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    margin-left: 130px;
+}
+
+.Result3DetailValue{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 35px;
+    line-height: 60px;
+    letter-spacing: 0%;
+    text-align: right;
+
+    color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    float: right;
+    margin-right: 130px;
+}
+
+.ResultPOGraphTitle{
+    width: 300px;
+    height: 36px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: rgba(240, 240, 240, 1);
+
+    margin-top: 100px;
+    margin-left: 387px;
+}
+
+.ResultHalfGraphForm{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.ResultROCGraph{
+    width: 587px;
+    height: 519px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+
+    display: inline-block;
+}
+
+.ResultTLCGraph{
+    width: 587px;
+    height: 519px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+
+    display: inline-block;
+    margin-left: 60px;
+}
+
+.ResultHalfGraphTitle{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: rgba(240, 240, 240, 1);
+    margin-top: 35px;
+    margin-left: 44px;
+    text-align: left;  
+}
+
+.ResultFPRGraphForm{
+    width: 1236px;
+    height: 519px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.ResultFPRGraphBox{
+    width: 33.17%;
+    height: 100%;
+    flex: 1;
+    display: inline-block;
+}
+
+.ResultFPRGraphTitle{
+    width: 100%;
+    text-align: center;
+    margin-top: 123px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: rgba(240, 240, 240, 1);
+}
+
+.ResultSelectForm{
+    width: 1236px;
+    height: 200px;
+    border-radius: 30px;
+
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.ResultSelectTitle{
+    height: 36px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: rgba(240, 240, 240, 1);
+    margin-top: 36px;
+    margin-left: 46px;
+}
+
+.ResultSelectBox{
+    height: 164px;
+    overflow: hidden;
+}
+
+.ResultSelectInput{
+    width: 25.846153259277344px;
+    height: 25.846153259277344px;
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 37px;
+}
+
+.ResultSelectInputText{
+    height: 45px;
+
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 29.54px;
+    line-height: 44.31px;
+    letter-spacing: -0.58px;
+
+    color: rgba(240, 240, 240, 1);
+    display: inline-block;
+    margin-left: 22.15px;
+}
+
+.ResultSelectInputK2{
+    width: 60.87980651855469px;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 14.77px;
+    border-width: 1.85px;
+    gap: 7.38px;
+    background: rgba(245, 158, 11, 1);
+    display: inline-block;
+    text-align: center;
+
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 22.15px;
+    line-height: 29.54px;
+    letter-spacing: 0px;
+
+    color: rgba(240, 240, 240, 1);
+    margin-left: 22.15px;
+}
+
+.ResultSelectInputKepler{
+    width: 60.87980651855469px;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 14.77px;
+    border-width: 1.85px;
+    gap: 7.38px;
+    background: rgba(59, 130, 246, 1);
+    display: inline-block;
+    text-align: center;
+
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 22.15px;
+    line-height: 29.54px;
+    letter-spacing: 0px;
+
+    color: rgba(240, 240, 240, 1);
+    margin-left: 22.15px;
+}
+
+.ResultSelectInputTESS{
+    width: 60.87980651855469px;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 14.77px;
+    border-width: 1.85px;
+    gap: 7.38px;
+    background: rgba(16, 185, 129, 1);
+    display: inline-block;
+    text-align: center;
+
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 22.15px;
+    line-height: 29.54px;
+    letter-spacing: 0px;
+
+    color: rgba(240, 240, 240, 1);
+    margin-left: 22.15px;
+}
+
+.ResultPRDGraphForm{
+    width: 1236px;
+    height: 563px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.ResultExpertGraphTitle{
+    height: 36px;
+
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    color: rgba(240, 240, 240, 1);
+    margin-top: 40px;
+    margin-left: 46px;
+}
+
+.ResultExpertGraphForm{
+    width: 1236px;
+    height: 519px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.ResultTDDRowGraphForm{
+    width: 1236px;
+    height: 349px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.ResultTTDSquareGraphForm{
+    width: 1236px;
+    height: 1257px;
+    border-radius: 30px;
+    background: rgba(139, 137, 255, 0.15);
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.ResultSaveForm2{
+    width: 1234px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 30px
+}
+
+.ResultSave2{
+    width: 250px;
+    height: 53px;
+    border-radius: 100px;
+    gap: 10px;
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+
+    display: inline-block;
+    margin-left: 28px;
+    overflow: hidden;
+}
+
+.ResultDiscovery2{
+    width: 200px;
+    height: 47px;
+    border-width: 3px;
+    gap: 10px;
+    border: 3px solid transparent;
+    border-radius: 100px;
+    background-image: linear-gradient(rgba(12, 12, 40, 1), rgba(12, 12, 40, 1)), linear-gradient(to right, rgba(139, 137, 255, 1) 0%, rgba(115, 198, 228, 1) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display: inline-block;
+    margin-left: 10px;
+    overflow: hidden;
+} 
+
+.ResultSaveText2{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(240, 240, 240, 1);
+
+    margin-top: 15px;
+}
+
+.ResultDiscoveryText2{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 12px;
+}
+
+.ResultButtonForm{
+    width: 1234px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 117px
+}
+
+.ResultRefine{
+    width: 500px;
+    height: 77px;
+    border-width: 3px;
+    gap: 10px;
+    border: 3px solid transparent;
+    border-radius: 100px;
+    background-image: linear-gradient(rgba(12, 12, 40, 1), rgba(12, 12, 40, 1)), linear-gradient(to right, rgba(139, 137, 255, 1) 0%, rgba(115, 198, 228, 1) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ResultRestart{
+    width: 500px;
+    height: 83px;
+    border-radius: 100px;
+    gap: 10px;
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+
+    display: inline-block;
+    margin-left: 55px;
+    overflow: hidden;
+} 
+
+.ResultRefineText{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    text-align: center;
+    background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-top: 15px;
+}
+
+.ResultRestartText2{
+    font-family: Pretendard;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(240, 240, 240, 1);
+
+    margin-top: 18px;
+}
+
+.ResultSave:hover, .ResultDiscovery:hover,
+.ResultSave2:hover, .ResultDiscovery2:hover,
+.ResultRefine:hover, .ResultRestart:hover{
+    cursor: pointer;
+}
