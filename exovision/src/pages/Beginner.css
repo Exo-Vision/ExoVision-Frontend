@@ -14,14 +14,6 @@
     padding-top: 37px;
 }
 
-.BeginnerHeaderV{
-    color: rgba(139, 137, 255, 1);
-    display: inline-block;
-    font-style: italic;
-    margin-right: 5px;
-    font-size: 34px;
-}
-
 .BeginnerTitle{
     color: #F0F0F0;
     width: 810px;
@@ -78,6 +70,7 @@
     height: 52px;
     border-radius: 100px;
     gap: 10px;
+    margin: 0 auto;
     display: inline-block;
 }
 
@@ -89,6 +82,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
+    margin-top: 6px;
 }
 
 .BeginnerDetailFormBox{
@@ -110,7 +104,7 @@
 }
 
 .BeginnerDetail{
-    width: 1155px;
+    width: auto;
     height: 90px;
     top: 541px;
     left: 383px;
@@ -197,27 +191,9 @@
     width: 969px;
     height: 17px;
     border-radius: 100px;
-    accent-color: rgba(109, 50, 210, 1);
     margin-left: 30px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
 }
 
-input[type=range]::-ms-fill-upper {
-  background: #3071a9;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-
-input[type=range]::-ms-fill-lower {
-  background: gray;
-  border: 0.2px solid #010101;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
 
 .BeginnerInputMax{
     width: 45px;
@@ -321,8 +297,8 @@ input[type=range]::-ms-fill-lower {
 .BeginnerInputDetailBox1{
     width: 519px;
     height: 90px;
-    top: 887px;
-    left: 802px;
+    top: 862px;
+    left: 782px;
     border-radius: 10px;
     gap: 10px;
     background-color: rgba(26, 26, 26, 0.3);
@@ -333,8 +309,8 @@ input[type=range]::-ms-fill-lower {
 .BeginnerInputDetailBox2{
     width: 519px;
     height: 115px;
-    top: 1217px;
-    left: 863px;
+    top: 1190px;
+    left: 840px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;
@@ -345,8 +321,8 @@ input[type=range]::-ms-fill-lower {
 .BeginnerInputDetailBox3{
     width: 519px;
     height: 140px;
-    top: 1547px;
-    left: 739px;
+    top: 1520px;
+    left: 729px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;
@@ -357,8 +333,20 @@ input[type=range]::-ms-fill-lower {
 .BeginnerInputDetailBox4{
     width: 519px;
     height: 140px;
-    top: 1878px;
-    left: 926px;
+    top: 1850px;
+    left: 913px;
+    border-radius: 10px;
+    gap: 10px;
+    position: absolute;
+    background-color: rgba(26, 26, 26, 0.3);
+    z-index: 0;
+}
+
+.BeginnerInputDetailBox5{
+    width: 519px;
+    height: 90px;
+    top: 2184px;
+    left: 762px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;

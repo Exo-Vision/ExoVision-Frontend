@@ -2,3 +2,27 @@
     padding: 0px;
     margin: 0px;
 }
+
+@font-face {
+  font-family: "Jura";
+  font-weight: Regular;
+  src: url("./assets/font/Jura-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jura";
+  font-weight: Medium;
+  src: url("./assets/font/Jura-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: Regular;
+  src: url("./assets/font/Pretendard-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: Medium;
+  src: url("./assets/font/Pretendard-Medium.ttf") format("truetype");
+}
