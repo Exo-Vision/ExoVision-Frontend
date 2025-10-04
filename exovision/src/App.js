@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import MainPage from './pages/'
+import MainPage from './pages/MainPage'
 import Beginner from './pages/Beginner'
 import Result from './pages/Result'
 import Expert from './pages/Expert'
