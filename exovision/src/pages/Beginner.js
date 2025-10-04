@@ -2,6 +2,7 @@ import './Beginner.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import EXOVISION from './../assets/EXOVISION.png'
+import CustomSlider from "./CustomSlider";
 
 function UserPage() {
 const navigate = useNavigate();
@@ -38,10 +39,10 @@ const navigate = useNavigate();
                         <div className='BeginnerInputText'>Orbital Period (days)</div>
                         <div className='BeginnerInputDetail' onMouseOver={() => {setDetail1(1);}}>!</div>
                     </div>
-                    <div>
-                        <div className='BeginnerInputMin'>0.1</div>
-                        <input type='range' className='BeginnerInput' defaultValue='0.1' min="0.1" max="1000" step='0.5' onChange={(e) => setTest1(e.target.value)}></input>
-                        <div className='BeginnerInputMax'>1000</div>
+                    <div className='BeginnerInputSliderWrapper'>
+                        <span>0.5</span>
+                        <CustomSlider min={0.5} max={500} step={0.5} formatter={(v) => `${v} days`} gradient={["#6D32D2", "#A444E5"]} value={test1} setValue={setTest1}/>
+                        <span>500</span>
                     </div>
                     </div></div>
 
@@ -50,10 +51,10 @@ const navigate = useNavigate();
                         <div className='BeginnerInputText'>Transit Duration (hours)</div>
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail2(1)}>!</div>
                     </div>
-                    <div>
-                        <div className='BeginnerInputMin'>0.1</div>
-                        <input type='range' className='BeginnerInput' defaultValue='0.1' min="0.1" max="24" step='0.3' onChange={(e) => setTest2(e.target.value)}></input>
-                        <div className='BeginnerInputMax'>24</div>
+                    <div className='BeginnerInputSliderWrapper'>
+                        <span>0.1</span>
+                        <CustomSlider min={0.1} max={24} step={0.3} formatter={(v) => `${v} hours`} gradient={["#6D32D2", "#A444E5"]} value={test2} setValue={setTest2}/>
+                        <span>24</span>
                     </div>
                     </div></div>
 
@@ -62,10 +63,10 @@ const navigate = useNavigate();
                         <div className='BeginnerInputText'>Transit Depth (%)</div>
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail3(1)}>!</div>
                     </div>
-                    <div>
-                        <div className='BeginnerInputMin'>0.001</div>
-                        <input type='range' className='BeginnerInput' defaultValue='0.001' min="0.001" max="10" step='0.005' onChange={(e) => setTest3(e.target.value)}></input>
-                        <div className='BeginnerInputMax'>10</div>
+                    <div className='BeginnerInputSliderWrapper'>
+                        <span>0.001</span>
+                        <CustomSlider min={0.001} max={10} step={0.005} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]} value={test3} setValue={setTest3}/>
+                        <span>10</span>
                     </div>
                     </div></div>
 
@@ -74,10 +75,10 @@ const navigate = useNavigate();
                         <div className='BeginnerInputText'>Signal-to-Noise Ratio (SNR)</div>
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail4(1)}>!</div>
                     </div>
-                    <div>
-                        <div className='BeginnerInputMin'>1</div>
-                        <input type='range' className='BeginnerInput' defaultValue='1' min="1" max="100" onChange={(e) => setTest4(e.target.value)}></input>
-                        <div className='BeginnerInputMax'>100</div>
+                    <div className='BeginnerInputSliderWrapper'>
+                        <span>1</span>
+                        <CustomSlider min={1} max={100} step={0.1} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]}  value={test4} setValue={setTest4}/>
+                        <span>100</span>
                     </div>
                     </div></div>
                 <div><div className='BeginnerUIForm'>
@@ -85,10 +86,10 @@ const navigate = useNavigate();
                         <div className='BeginnerInputText'>Planet Radius (radi)</div>
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail5(1)}>!</div>
                     </div>
-                    <div>
-                        <div className='BeginnerInputMin'>0.1</div>
-                        <input type='range' className='BeginnerInput' defaultValue='0.1' min="0.1" max="30" onChange={(e) => setTest5(e.target.value)}></input>
-                        <div className='BeginnerInputMax'>30</div>
+                    <div className='BeginnerInputSliderWrapper'>
+                        <span>0.5</span>
+                        <CustomSlider min={0.1} max={30} step={0.1} formatter={(v) => `x ${v}`} gradient={["#6D32D2", "#A444E5"]} value={test5} setValue={setTest5}/>
+                        <span>500</span>
                     </div>
                     </div></div>
             </div>

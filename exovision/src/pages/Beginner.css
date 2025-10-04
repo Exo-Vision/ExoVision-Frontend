@@ -366,3 +366,21 @@
     margin-top: 20px;
     margin-left: 89.5px;
 }
+
+.BeginnerInputSliderWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 60px;
+}
+
+.BeginnerInputSliderWrapper > span{
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    color: rgba(240, 240, 240, 1);
+}
