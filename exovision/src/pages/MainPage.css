@@ -1,0 +1,138 @@
+.backGround {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #1A1A1A 0%, #000235 100%);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.bigEllipse {
+    position: fixed;
+    left: 160px;
+    top: 20vh;
+    width: 1515px;
+    height: 540px;
+    transform: rotate(-14.399deg);
+    border-radius: 100%;
+    border: 3px solid #F0F0F0;
+    box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.circle {
+    position: fixed;
+    left: 540px;
+    top: 5vh;
+    width: 336px;
+    height: 336px;
+    border-radius: 336px;
+    border: 3px solid rgba(139, 137, 255, 0.8);
+    box-shadow: 0 4px 20px 0 #8B89FF;
+}
+
+.circle2 {
+    position: fixed;
+    left: 1144px;
+    top: 3vh;
+    width: 169px;
+    height: 169px;
+    border-radius: 169px;
+    border: 3px solid rgba(139, 137, 255, 0.8);
+    box-shadow: 0 4px 20px 0 #8B89FF;
+}
+
+.titleWrapper {
+    min-width: 55vw;
+    height: auto;
+    position: relative;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+}
+
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title > img {
+    margin: 0 -20px
+}
+
+.title :nth-child(4) {
+    transform: translateY(-20px);
+    margin: 0
+}
+
+.subTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8B89FF;
+    /*font-family: Pretendard;*/
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4px
+}
+
+.buttonWrapper {
+    position: fixed;
+    bottom: 120px;
+    right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: start;
+    margin-top: 100px;
+}
+
+.buttonWrapper > a {
+    text-decoration: none;
+    color: #F0F0F0;
+    /*font-family: Pretendard;*/
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-shadow: 0 4px 30px transparent;
+
+}
+
+.buttonWrapper > a:hover {
+    border-radius: 100px;
+    text-shadow: 0 4px 30px #fff;
+}
+
+.logButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 274px;
+    height: 60px;
+}
+
+.logButton > a {
+    position: absolute;
+    padding-bottom: 5px;
+    background: linear-gradient(90deg, #8B89FF, #73C6E4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.logButton > img {
+    position: absolute;
+}
