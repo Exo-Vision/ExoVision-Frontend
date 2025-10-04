@@ -64,6 +64,7 @@
     margin: 0 -20px
 }
 
+/*4번째 요소인 V의 위치를 조정*/
 .title :nth-child(4) {
     transform: translateY(-20px);
     margin: 0
@@ -107,6 +108,7 @@
 
 }
 
+/*마우스 호버시 텍스트 그림자 생성*/
 .buttonWrapper > a:hover {
     border-radius: 100px;
     text-shadow: 0 4px 30px #fff;
@@ -120,6 +122,7 @@
     height: 60px;
 }
 
+/*텍스트를 마스킹하는 그라디언트 클립 생성*/
 .logButton > a {
     position: absolute;
     padding-bottom: 5px;

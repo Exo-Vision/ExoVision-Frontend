@@ -12,18 +12,22 @@ import gradient_border from '../assets/gradient_border.svg'
 export default function MainPage() {
     return (
         <div className="backGround">
+            {/* 별 배경 */}
             <StarField
                 density={8}
                 followMouse
                 parallaxStrength={0.02}
                 parallaxEase={0.05}
                 respectReducedMotion={false} // force motion in case OS reduce-motion is ON
+                aria-hidden="true"
             />
-            {/* decorative only */}
+
+            {/* 로고 배경 */}
             <div className="bigEllipse" aria-hidden="true" />
             <div className="circle" aria-hidden="true" />
             <div className="circle2" aria-hidden="true" />
 
+            {/* 타이틀 */}
             <div className="titleWrapper">
                 <div className="title" aria-label="EXOVISION">
                     <img src={E} alt="E" aria-hidden="true" />
@@ -38,11 +42,13 @@ export default function MainPage() {
                 </div>
                 <div className="subTitle">EXPLORE EXOPLANETS</div>
 
-                {/* buttons live under title on mobile, float right on desktop via CSS */}
+                {/*버튼*/}
+                {/*//TODO: href 연결*/}
                 <nav className="buttonWrapper" aria-label="difficulty">
                     <a href="">Beginner →</a>
                     <a href="">Expert →</a>
                     <div className="logButton">
+                        {/*둥근 모서리의 그라디언트 테두리가 Pure CSS로 작성이 어려워, 벡터 이미지로 대체했습니다.*/}
                         <img src={gradient_border} alt="border" aria-hidden="true"/>
                         <a href="">
                             Discovery Log

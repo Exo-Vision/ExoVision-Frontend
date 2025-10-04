@@ -1,6 +1,24 @@
 import { useEffect, useRef } from "react";
-import PropTypes from "prop-types";
-
+/**
+ * 배경에 별을 그리는 컴포넌트 입니다.
+ * @param {number} maxStars - 최대로 생성할 별의 개수
+ * @param {number} density - maxStars가 없을 때 별의 개수를 결정하는 비율
+ * @param {number} twinkleAmplitude - 별이 반짝이는 밝기 변화 비율
+ * @param {number} twinkleSpeedRange - 별이 반짝이는 속도 비율
+ * @param {number} radiusRange - 별 크기 비율
+ * @param {number} colorVariance - hue 색상 분포도
+ * @param {number} zIndex - 컴포넌트의 z-index
+ * @param {string} className - 컴포넌트의 Class Name
+ * @param {boolean} followMouse - true로 설정 시, mouse 이벤트를 통해 camera를 이동합니다.
+ * @param {number} parallaxStrength - followMouse가 true일 때, camera 이동 속도를 조절합니다.(1)
+ * @param {number} parallaxEase - followMouse가 true일 때, camera 이동 속도를 조절합니다.(2)
+ * @param {boolean} idleDrift - followMouse가 true일 때, camera 이동 속도를 조절합니다.(3)
+ * @param {number} idleDriftStrength - followMouse가 true일 때, camera 이동 속도를 조절합니다.(4)
+ * @param {number} idleDriftSpeed - followMouse가 true일 때, camera 이동 속도를 조절합니다.(5)
+ * @param {boolean} respectReducedMotion - true로 설정 시, 브라우저의 애니메이션 최소화 설정을 무시합니다
+ * @returns
+ *
+ * */
 export function StarField({
                               maxStars,
                               density = 0.12,
@@ -17,9 +35,7 @@ export function StarField({
                               idleDrift = true,
                               idleDriftStrength,
                               idleDriftSpeed = 0.05,
-
-                              respectReducedMotion = true, // NEW: set false to force motion even if OS prefers reduce
-                              debug = false,               // NEW: shows moving camera dot + numbers
+                              respectReducedMotion = true,
                           }) {
     const canvasRef = useRef(null);
     const rafRef = useRef(null);
@@ -153,24 +169,6 @@ export function StarField({
                 ctx.fill();
             }
             ctx.restore();
-
-            if (debug) {
-                // moving dot at camera offset + readout
-                ctx.save();
-                ctx.fillStyle = "rgba(255,255,255,0.9)";
-                ctx.beginPath();
-                ctx.arc(state.w / 2 + state.camX, state.h / 2 + state.camY, 3, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.fillStyle = "rgba(255,255,255,0.7)";
-                ctx.font = "12px system-ui, -apple-system, Segoe UI, Roboto, Arial";
-                ctx.fillText(
-                    `cam (${state.camX.toFixed(1)}, ${state.camY.toFixed(1)})`,
-                    12,
-                    20
-                );
-                ctx.restore();
-            }
-
             rafRef.current = requestAnimationFrame(drawFrame);
         }
 
@@ -221,7 +219,6 @@ export function StarField({
         idleDriftStrength,
         idleDriftSpeed,
         respectReducedMotion,
-        debug,
     ]);
 
     return (
@@ -240,22 +237,3 @@ export function StarField({
         />
     );
 }
-
-StarField.propTypes = {
-    maxStars: PropTypes.number,
-    density: PropTypes.number,
-    twinkleAmplitude: PropTypes.number,
-    twinkleSpeedRange: PropTypes.arrayOf(PropTypes.number),
-    radiusRange: PropTypes.arrayOf(PropTypes.number),
-    colorVariance: PropTypes.number,
-    zIndex: PropTypes.number,
-    className: PropTypes.string,
-    followMouse: PropTypes.bool,
-    parallaxStrength: PropTypes.number,
-    parallaxEase: PropTypes.number,
-    idleDrift: PropTypes.bool,
-    idleDriftStrength: PropTypes.number,
-    idleDriftSpeed: PropTypes.number,
-    respectReducedMotion: PropTypes.bool,
-    debug: PropTypes.bool,
-};
