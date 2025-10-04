@@ -718,6 +718,6 @@
 
 .ResultSave:hover, .ResultDiscovery:hover,
 .ResultSave2:hover, .ResultDiscovery2:hover,
-.ResultRefine:hover, .ResultRestart:hover{
+.ResultRefine:hover, .ResultRestart:hover, .ResultHeader:hover{
     cursor: pointer;
 }

@@ -22,7 +22,7 @@ const navigate = useNavigate();
     return (
         <div className='BeginnerBody'>
             <div className="BeginnerHeader">
-                <img src={EXOVISION}></img>
+                <img src={EXOVISION} onClick={() => navigate('/')}></img>
             </div>
             <div><div className='BeginnerTitle'>EXPLORE EXOPLANETS</div></div>
             <div>

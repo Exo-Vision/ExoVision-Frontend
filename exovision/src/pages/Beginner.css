@@ -5,13 +5,14 @@
 }
 
 .BeginnerHeader{
-    color: white;
     width: 187.36627197265625px;
     height: 26.069820404052734px;
-    opacity: 1;
-    font-size: 24px;
     margin-left: 99px;
     padding-top: 37px;
+}
+
+.BeginnerHeader:hover{
+    cursor: pointer;
 }
 
 .BeginnerTitle{

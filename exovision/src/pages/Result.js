@@ -7,7 +7,7 @@ function Result() {
 
     return (
         <div className='ResultBody'>
-            <div className='ResultHeader'><img src={exovision}></img></div>
+            <div className='ResultHeader'><img src={exovision} onClick={() => navigate('/')}></img></div>
             <div className='ResultSaveForm'>
                 <div className='ResultSave'><div className='ResultSaveText'>+Log This Planet</div></div>
                 <div className='ResultDiscovery'><div className='ResultDiscoveryText'>Discovery Log</div></div>

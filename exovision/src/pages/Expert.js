@@ -1,7 +1,7 @@
 import './Expert.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import exovision from './../images/EXOVISION.png'
+import exovision from './../assets/EXOVISION.png'
 
 function Expert() {
     const navigate = useNavigate();
@@ -14,7 +14,7 @@ function Expert() {
     return (
         <div className='ExpertBody'>
             <div className="ExpertHeader">
-                <img src={exovision}></img>
+                <img src={exovision} onClick={() => navigate('/')}></img>
             </div>
             <div><div className='ExpertTitle'>EXPLORE EXOPLANETS</div></div>
             <div>
@@ -71,7 +71,7 @@ function Expert() {
             <div className='Eclipse1'></div>
             <div className='Eclipse2'></div>
             <div className='Eclipse3'></div>
-            <div className='ExpertSwitchBeginner' onClick={() => navigate("/beginner")}></div>
+            <div className='ExpertSwitchBeginner' onClick={() => navigate("/begin")}></div>
         </div>
     );
 }

@@ -45,8 +45,8 @@ export default function MainPage() {
                 {/*버튼*/}
                 {/*//TODO: href 연결*/}
                 <nav className="buttonWrapper" aria-label="difficulty">
-                    <a href="">Beginner →</a>
-                    <a href="">Expert →</a>
+                    <a href="/begin">Beginner →</a>
+                    <a href="/expert">Expert →</a>
                     <div className="logButton">
                         {/*둥근 모서리의 그라디언트 테두리가 Pure CSS로 작성이 어려워, 벡터 이미지로 대체했습니다.*/}
                         <img src={gradient_border} alt="border" aria-hidden="true"/>
