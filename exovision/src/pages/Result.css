@@ -420,7 +420,7 @@
 
 .ResultSelectForm{
     width: 1236px;
-    height: 200px;
+    height: 100px;
     border-radius: 30px;
 
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
@@ -430,8 +430,7 @@
 }
 
 .ResultSelectTitle{
-    height: 36px;
-
+    height: 30px;
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
@@ -440,13 +439,17 @@
     letter-spacing: 0%;
 
     color: rgba(240, 240, 240, 1);
-    margin-top: 36px;
     margin-left: 46px;
+    display: inline-block;
+    margin-top: 32px;
+    overflow: hidden;
 }
 
 .ResultSelectBox{
-    height: 164px;
     overflow: hidden;
+    display: inline-block;
+    margin-top: 25px;
+    float: right;
 }
 
 .ResultSelectInput{
@@ -454,7 +457,6 @@
     height: 25.846153259277344px;
     display: inline-block;
     margin-left: 60px;
-    margin-top: 37px;
 }
 
 .ResultSelectInputText{
@@ -536,6 +538,7 @@
 
     color: rgba(240, 240, 240, 1);
     margin-left: 22.15px;
+    margin-right: 80px;
 }
 
 .ResultPRDGraphForm{
