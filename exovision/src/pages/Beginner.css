@@ -126,12 +126,8 @@
     background: #8787874D;
     border: 1px solid #888888;
     backdrop-filter: blur(30px);
-<<<<<<< Updated upstream
-    margin: 50px auto 0;
-=======
     margin: 0 auto;
     margin-top: 39px;
->>>>>>> Stashed changes
 }
 
 .BeginnerInputText {
@@ -140,17 +136,11 @@
 
     font-family: Pretendard;
     font-weight: 500;
-<<<<<<< Updated upstream
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: 0;
-=======
     font-style: Medium;
     font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
 
->>>>>>> Stashed changes
     color: #F0F0F0;
     display: inline-block;
     margin-top: 36px;
@@ -158,14 +148,9 @@
 }
 
 .BeginnerInputDetail {
-<<<<<<< Updated upstream
-    width: 33px;
-    height: 33px;
-=======
     width: 34px;
     height: 34px;
     border-width: 3px;
->>>>>>> Stashed changes
     border: 3px solid rgba(139, 137, 255, 1);
     color: rgba(139, 137, 255, 1);
     border-radius: 100%;
@@ -184,12 +169,8 @@
 
     font-family: Pretendard;
     font-weight: 400;
-<<<<<<< Updated upstream
-    font-size: 25px;
-=======
     font-style: Regular;
     font-size: 20px;
->>>>>>> Stashed changes
     line-height: 100%;
     letter-spacing: 0;
     text-align: right;
@@ -283,17 +264,11 @@
 
     font-family: Pretendard;
     font-weight: 400;
-<<<<<<< Updated upstream
-    font-size: 25px;
-    line-height: 100%;
-    letter-spacing: 0;
-=======
     font-style: Regular;
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
 
->>>>>>> Stashed changes
     color: rgba(240, 240, 240, 1);
     margin-top: 45px;
 }
@@ -320,12 +295,8 @@
     color: #F0F0F0;
     font-family: Pretendard;
     font-weight: 500;
-<<<<<<< Updated upstream
-    font-size: 40px;
-=======
     font-style: Medium;
     font-size: 30px;
->>>>>>> Stashed changes
     line-height: 100%;
     letter-spacing: 0;
     text-align: center;
@@ -459,22 +430,3 @@
     margin-left: 89.5px;
 }
 
-<<<<<<< Updated upstream
-.BeginnerInputSliderWrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 60px;
-}
-
-.BeginnerInputSliderWrapper > span{
-    font-family: Pretendard;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 25px;
-    letter-spacing: 0;
-    color: rgba(240, 240, 240, 1);
-}
-=======
->>>>>>> Stashed changes

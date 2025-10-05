@@ -96,9 +96,7 @@ const navigate = useNavigate();
             </div>
 
             <div><div className='BeginnerSubmitForm' onClick={() => console.log(test1, test2, test3, test4, test5)}><div className='BeginnerSubmit'>Start the Journey</div></div></div>
-            <div className='Eclipse1'></div>
-            <div className='Eclipse2'></div>
-            <div className='Eclipse3'></div>
+            
             <div className='BeginnerSwitchExpert' onClick={() => navigate("/expert")}></div>
             {(detail1 === 1) && (<div className='BeginnerInputDetailBox1' onMouseOut={() => setDetail1(0)}><div className='BeginnerInputDetailAdd'>The time it takes for a planet to complete<br/>one full orbit around its host star.</div></div>)}
             {(detail2 === 1) && (<div className='BeginnerInputDetailBox2' onMouseOut={() => setDetail2(0)}><div className='BeginnerInputDetailAdd'>The total time the planet takes to cross<br/>in front of its star, as observed in a<br/>transit event.</div></div>)}
