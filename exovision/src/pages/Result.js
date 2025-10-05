@@ -121,7 +121,7 @@ function Result() {
             </div>
             <div className='ResultButtonForm'>
                 <div className='ResultRefine'><div className='ResultRefineText'>Refine Input</div></div>
-                <div className='ResultRestart' onClick={() => navigate("/")}><div className='ResultRestartText2'>Restart Mission</div></div>
+                <div className='ResultRestart' onClick={() => navigate("/")}><div className='ResultRestartText'>Restart Mission</div></div>
             </div>
         </div>
     );
