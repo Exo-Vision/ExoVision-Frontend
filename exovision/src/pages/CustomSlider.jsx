@@ -32,7 +32,7 @@ export default function CustomSlider({
                 step={step}
                 styles={{
                     ...styles,
-                    root: { width: 969, height: 17, borderRadius: 100 },
+                    root: { width: 702.8, height: 12.33, borderRadius: 100, paddingRight: 0, marginRight: 0, paddingLeft: 0, marginLeft: -100, marginTop: 50.5 },
                     track: { background: segmentGradient(0, value/max, gradient) }, // for single-thumb
                     rail: {background: "rgba(135,135,135,0.3)"},
                 }}

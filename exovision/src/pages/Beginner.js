@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import EXOVISION from './../assets/EXOVISION.png'
 import CustomSlider from "./CustomSlider";
+import background from './../assets/background.png'
 
 function UserPage() {
 const navigate = useNavigate();
@@ -40,9 +41,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => {setDetail1(1);}}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span>0.5</span>
+                        <span className='BeginnerInputMin1'>0.5</span>
                         <CustomSlider min={0.5} max={500} step={0.5} formatter={(v) => `${v} days`} gradient={["#6D32D2", "#A444E5"]} value={test1} setValue={setTest1}/>
-                        <span>500</span>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>500</div></span>
                     </div>
                     </div></div>
 
@@ -52,9 +53,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail2(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span>0.1</span>
+                        <span className='BeginnerInputMin2'>0.1</span>
                         <CustomSlider min={0.1} max={24} step={0.3} formatter={(v) => `${v} hours`} gradient={["#6D32D2", "#A444E5"]} value={test2} setValue={setTest2}/>
-                        <span>24</span>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>24</div></span>
                     </div>
                     </div></div>
 
@@ -64,9 +65,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail3(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span>0.001</span>
+                        <span className='BeginnerInputMin3'>0.001</span>
                         <CustomSlider min={0.001} max={10} step={0.005} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]} value={test3} setValue={setTest3}/>
-                        <span>10</span>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>10</div></span>
                     </div>
                     </div></div>
 
@@ -76,9 +77,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail4(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span>1</span>
+                        <span className='BeginnerInputMin4'>1</span>
                         <CustomSlider min={1} max={100} step={0.1} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]}  value={test4} setValue={setTest4}/>
-                        <span>100</span>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>100</div></span>
                     </div>
                     </div></div>
                 <div><div className='BeginnerUIForm'>
@@ -87,9 +88,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail5(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span>0.5</span>
+                        <span className='BeginnerInputMin5'>0.5</span>
                         <CustomSlider min={0.1} max={30} step={0.1} formatter={(v) => `x ${v}`} gradient={["#6D32D2", "#A444E5"]} value={test5} setValue={setTest5}/>
-                        <span>500</span>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>500</div></span>
                     </div>
                     </div></div>
             </div>
