@@ -5,6 +5,8 @@ import Beginner from './pages/Beginner'
 import Result from './pages/Result'
 import Expert from './pages/Expert'
 
+import POGraph from "./graph/POGraph";
+
 function App() {
     return (
         <div className="App">
