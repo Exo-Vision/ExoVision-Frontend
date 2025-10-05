@@ -97,11 +97,16 @@
     z-index: 1;
 }
 
+.BeginnerDetailTextForm{
+    width: 1155px;
+    height: 90px;
+    padding-top: 70px;
+    padding-left: 37px;
+}
+
 .BeginnerDetail{
     width: 1180px;
     height: 90px;
-    top: 541px;
-    left: 383px;
 
     font-family: Jura;
     font-weight: 400;
@@ -409,8 +414,8 @@
 .BeginnerInputDetailBox5{
     width: 519px;
     height: 90px;
-    top: 1703px;
-    left: 82px;
+    top: 1711px;
+    left: 830px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;

@@ -32,8 +32,11 @@ const navigate = useNavigate();
                     <div className='BeginnerTextFormExpert'><div className='BeginnerTextExpert'>Expert</div></div>
                 </div>
             </div>
-            <div className='BeginnerDetailFormBox'><div className='BeginnerDetailForm'></div></div>
-            <div className='BeginnerDetail'>New to astronomy? Just move the sliders and discover your very own exoplanet!<br/>No complicated calculations—just the fun of exploring the universe.</div>
+            <div className='BeginnerDetailFormBox'>
+                <div className='BeginnerDetailForm'></div>
+                <div className='BeginnerDetailTextForm'><div className='BeginnerDetail'>New to astronomy? Just move the sliders and discover your very own exoplanet!<br/>No complicated calculations—just the fun of exploring the universe.</div></div>
+            </div>
+
             <div className='BeginnerUI'>
                 <div><div className='BeginnerUIForm'>
                     <div>
@@ -94,7 +97,9 @@ const navigate = useNavigate();
                     </div>
                     </div></div>
             </div>
-
+            <div className='Eclipse1'></div>
+            <div className='Eclipse2'></div>
+            <div className='Eclipse3'></div>
             <div><div className='BeginnerSubmitForm' onClick={() => console.log(test1, test2, test3, test4, test5)}><div className='BeginnerSubmit'>Start the Journey</div></div></div>
             
             <div className='BeginnerSwitchExpert' onClick={() => navigate("/expert")}></div>
