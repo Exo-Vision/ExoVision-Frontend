@@ -1,7 +1,8 @@
 import './Result.css'
 import exovision from './../assets/EXOVISION.png'
 import { useNavigate } from 'react-router-dom'
-
+import gradient_border_400_67 from '../assets/gradient_border_400_67.svg'
+import gradient_border_200_53 from '../assets/gradient_border_200_53.svg'
 function Result() {
     const navigate = useNavigate();
 
@@ -117,10 +118,16 @@ function Result() {
             </div>
             <div className='ResultSaveForm2'>
                 <div className='ResultSave2'><div className='ResultSaveText2'>+Log This Planet</div></div>
-                <div className='ResultDiscovery2'><div className='ResultDiscoveryText2'>Discovery Log</div></div>
+                <div className='ResultDiscovery2' onClick={() => navigate("/history")}>
+                    <img src={gradient_border_200_53} alt="gradient_border" />
+                    <div className='ResultDiscoveryText2'>Discovery Log</div>
+                </div>
             </div>
             <div className='ResultButtonForm'>
-                <div className='ResultRefine'><div className='ResultRefineText'>Refine Input</div></div>
+                <div className='ResultRefine' onClick={() => navigate("/expert")}>
+                    <img src={gradient_border_400_67} alt="gradient_border" />
+                    <div className='ResultRefineText'>Refine Input</div>
+                </div>
                 <div className='ResultRestart' onClick={() => navigate("/")}><div className='ResultRestartText'>Restart Mission</div></div>
             </div>
         </div>
