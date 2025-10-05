@@ -1,8 +1,54 @@
 import { useEffect, useRef } from "react";
 
 /**
- * 배경에 별을 그리는 컴포넌트 입니다.
- * + 유성(혜성) 효과 추가: 좌상단 바깥에서 우하단으로 날아가며 꼬리를 남김
+ * StarField — GPU-friendly starry sky canvas with optional pointer parallax and meteors.
+ *
+ * ─ Appearance & Density ─
+ * @param {number}   [maxStars]                         Exact star count. If omitted, star count is derived from `density`.
+ * @param {number}   [density=0.12]                     Stars per 10k px² (used when `maxStars` is not provided).
+ * @param {number}   [twinkleAmplitude=0.1]             Twinkle intensity (0–1).
+ * @param {[number,number]} [twinkleSpeedRange=[0.2,0.5]] Twinkle speed range in cycles/sec.
+ * @param {[number,number]} [radiusRange=[0.4,1.4]]     Star radius range in CSS px.
+ * @param {number}   [colorVariance=2]                  Hue variance around a blue base (larger = wider color spread).
+ * @param {number}   [zIndex=0]                         Canvas z-index.
+ * @param {string}   [className]                        Extra class name for the canvas.
+ *
+ * ─ Parallax (Pointer-driven Camera) ─
+ * @param {boolean}  [followMouse=true]                 Enable pointer-following camera.
+ * @param {number}   [parallaxStrength=0.08]            Max camera shift as a fraction of min(viewport) (e.g., 0.05 = 5%).
+ * @param {number}   [parallaxEase=0.08]                Camera easing factor (0–1; higher = snappier).
+ * @param {boolean}  [idleDrift=true]                   When idle, gently move the camera in a small loop.
+ * @param {number}   [idleDriftStrength]                Idle drift radius in px (default ≈ 0.5% of min(viewport)).
+ * @param {number}   [idleDriftSpeed=0.05]              Idle drift speed in cycles/sec.
+ * @param {boolean}  [respectReducedMotion=true]        Honor OS “Reduce motion” (disables twinkle/parallax/meteors when true).
+ *
+ * ─ Meteors / Comets ─
+ * @param {boolean}  [meteorsEnabled=true]              Enable occasional meteors.
+ * @param {[number,number]} [meteorRateRange=[3.5,7.5]] Spawn interval in seconds (min, max).
+ * @param {[number,number]} [meteorSpeedRange=[600,1100]] Meteor speed in px/sec.
+ * @param {[number,number]} [meteorLengthRange=[140,260]] Tail length in px.
+ * @param {[number,number]} [meteorThicknessRange=[2,3.2]] Stroke width in px.
+ * @param {[number,number]} [meteorHueRange=[195,225]]   Hue range for meteor color (HSL hue).
+ * @param {number}   [meteorSaturation=90]              Meteor saturation (%).
+ * @param {number}   [meteorLightnessHead=98]           Head lightness (%).
+ * @param {number}   [meteorLightnessTail=85]           Tail lightness (%).
+ * @param {number}   [meteorShadowBlur=12]              Glow blur in px.
+ *
+ * @returns {JSX.Element} Transparent full-bleed <canvas/> that draws the starfield.
+ *
+ * @example
+ * // Simple usage
+ * <StarField density={0.14} followMouse parallaxStrength={0.05} />
+ *
+ * @example
+ * // With meteors and stronger parallax
+ * <StarField
+ *   followMouse
+ *   parallaxStrength={0.06}
+ *   twinkleAmplitude={0.6}
+ *   meteorsEnabled
+ *   meteorRateRange={[3, 6]}
+ * />
  */
 export function StarField({
                               maxStars,
