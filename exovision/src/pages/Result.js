@@ -2,6 +2,8 @@ import './Result.css'
 import exovision from './../assets/EXOVISION.png'
 import { useNavigate } from 'react-router-dom'
 
+import PRDGraph from '../graph/ResponsiveBar';
+
 function Result() {
     const navigate = useNavigate();
 
@@ -93,7 +95,7 @@ function Result() {
             </div>
             <div className='ResultPRDGraphForm'>
                 <div className='ResultExpertGraphTitle'>Planet Radius Distribution</div>
-                <div></div>
+                <div className='ResultPRDGraph'><PRDGraph/></div>
             </div>
             <div className='ResultExpertGraphForm'>
                 <div className='ResultExpertGraphTitle'>Orbital Period vs Planet Radius</div>
