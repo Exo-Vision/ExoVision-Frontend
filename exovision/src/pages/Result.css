@@ -351,8 +351,8 @@
 }
 
 .ResultHalfGraphForm{
+    margin-top: 30px;
     text-align: center;
-    margin-top: 100px;
 }
 
 .ResultROCGraph{
@@ -365,13 +365,11 @@
 }
 
 .ResultTLCGraph{
-    width: 587px;
+    width: 1236px;
     height: 519px;
     border-radius: 30px;
     background: rgba(139, 137, 255, 0.15);
-
     display: inline-block;
-    margin-left: 60px;
 }
 
 .ResultHalfGraphTitle{
@@ -583,16 +581,6 @@
 .ResultTDDRowGraphForm{
     width: 1236px;
     height: 349px;
-    border-radius: 30px;
-    background: rgba(139, 137, 255, 0.15);
-    margin: 0 auto;
-    margin-top: 30px;
-    overflow: hidden;
-}
-
-.ResultTTDSquareGraphForm{
-    width: 1236px;
-    height: 1257px;
     border-radius: 30px;
     background: rgba(139, 137, 255, 0.15);
     margin: 0 auto;
