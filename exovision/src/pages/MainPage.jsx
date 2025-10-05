@@ -7,7 +7,7 @@ import S from '../assets/typography/S.svg'
 import V from '../assets/typography/V.svg'
 import X from '../assets/typography/X.svg'
 import {StarField} from "./starField";
-import gradient_border from '../assets/gradient_border.svg'
+import gradient_border from '../assets/gradient_border_274_60.svg'
 
 export default function MainPage() {
     return (
