@@ -1,6 +1,9 @@
 import './Result.css'
 import exovision from './../assets/EXOVISION.png'
 import { useNavigate } from 'react-router-dom'
+
+import POGraph from './../graph/POGraph'
+
 import gradient_border_400_67 from '../assets/gradient_border_400_67.svg'
 import gradient_border_200_53 from '../assets/gradient_border_200_53.svg'
 import top_floating_button from '../assets/top_floating_button.svg'
@@ -29,8 +32,7 @@ function Result() {
                 </div>
             </div>
             <div className='ResultPOGraphTitle'>Predicted Orbit Graph</div>
-            <div></div>
-
+            <div className='ResultPOGraph'><POGraph/></div>
             <div className='ResultSelectForm'>
                 <div className='ResultSelectTitle'>Select Missions</div>
                 <div className='ResultSelectBox'>
