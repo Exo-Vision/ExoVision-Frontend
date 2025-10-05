@@ -12,7 +12,7 @@
 }
 
 .ResultSaveForm{
-    width: 1234px;
+    width: 983px;
     margin: 0 auto;
     text-align: right;
     margin-top: 83.83px;
@@ -41,11 +41,11 @@
     background-origin: border-box;
     background-clip: content-box, border-box;
     display: inline-block;
-    margin-right: 20px;
     overflow: hidden;
 } 
 
 .ResultSaveText{
+    height: 24px;
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
@@ -59,6 +59,7 @@
 }
 
 .ResultDiscoveryText{
+    height: 24px;
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
@@ -494,6 +495,7 @@
 
     color: rgba(240, 240, 240, 1);
     margin-left: 22.15px;
+    vertical-align: top;
 }
 
 .ResultSelectInputKepler{
@@ -516,6 +518,7 @@
 
     color: rgba(240, 240, 240, 1);
     margin-left: 22.15px;
+    vertical-align: top;
 }
 
 .ResultSelectInputTESS{
@@ -539,6 +542,7 @@
     color: rgba(240, 240, 240, 1);
     margin-left: 22.15px;
     margin-right: 80px;
+    vertical-align: top;
 }
 
 .ResultPRDGraphForm{
@@ -631,6 +635,7 @@
 } 
 
 .ResultSaveText2{
+    height: 24px;
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
@@ -644,6 +649,7 @@
 }
 
 .ResultDiscoveryText2{
+    height: 24px;
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
@@ -702,7 +708,7 @@
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 12px;
+    margin-top: 13px;
 }
 
 .ResultRestartText{
@@ -715,7 +721,7 @@
     text-align: center;
     color: rgba(240, 240, 240, 1);
 
-    margin-top: 15px;
+    margin-top: 14px;
 }
 
 .ResultSave:hover, .ResultDiscovery:hover,
