@@ -23,8 +23,11 @@ function Expert() {
                     <div className='ExpertTextFormExpert'><div className='ExpertTextExpert'>Expert</div></div>
                 </div>
             </div>
-            <div className='ExpertDetailFormBox'><div className='ExpertDetailForm'></div></div>
-            <div className='ExpertDetail'>Want to explore space with real data?<br/>Enter the numbers yourself and determine the likelihood of an exoplanet.<br/>Experience the thrill of discovery like a true astronomer.</div>
+            <div className='ExpertDetailFormBox'>
+                <div className='ExpertDetailForm'></div>
+                <div className='ExpertDetailTextForm'><div className='ExpertDetail'>Want to explore space with real data?<br/>Enter the numbers yourself and determine the likelihood of an exoplanet.<br/>Experience the thrill of discovery like a true astronomer.</div></div>
+            </div>
+            
             
             <div className='ExpertUI'>
                 <div>
@@ -58,12 +61,6 @@ function Expert() {
                             <div className='ExpertInputSub'></div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div>  
-                <div className='ExpertProbable'>
-
                 </div>
             </div>
 

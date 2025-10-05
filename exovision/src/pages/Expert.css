@@ -1,6 +1,6 @@
 .ExpertBody{
-    background: linear-gradient(180deg, #1A1A1A 0%, #000235 100%);
-    width: 1920px;
+    background: linear-gradient(180deg, #00011C 0%, #000235 100%);
+    width: 100vw;
     padding-bottom: 143px;
 }
 
@@ -108,13 +108,17 @@
     position: absolute;
     z-index: 1;
 }
+.ExpertDetailTextForm{
+    width: 1155px;
+    height: 90px;
+    padding-top: 60px;
+    padding-left: 39px;
+}
 
 .ExpertDetail{
     width: 1155px;
     height: 90px;
-    top: 541px;
-    left: 383px;
-
+    
     font-family: Jura;
     font-weight: 400;
     font-style: Regular;
@@ -128,15 +132,15 @@
 }
 
 .ExpertUI{
-    width: 1234px;
+    width: 1100px;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .ExpertUIBox{
     width: 50%;
     display: inline-block;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 .ExpertInputTitle{
@@ -146,18 +150,18 @@
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
+
     color: rgba(240, 240, 240, 1);
 }
 
 .ExpertInput{
-    width: 420px;
-    height: 90px;
-    top: 904px;
-    left: 343px;
-    border-radius: 30px;
+    width: 350px;
+    height: 70px;
+    border-radius: 20px;
+
     background: var(--30, rgba(135, 135, 135, 0.3));
     display: inline-block;
     margin-top: 35px;
@@ -180,9 +184,10 @@
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
+
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -190,27 +195,15 @@
     margin-left: 20px;
 }
 
-.ExpertProbable{
-    width: 1234px;
-    height: 350px;
-    border-radius: 30px;
-    border-width: 1px;
-    background: var(--30, rgba(135, 135, 135, 0.3));
-    border: 1px solid var(--, rgba(136, 136, 136, 1));
-    margin: 0 auto;
-    margin-top: 30px;
-}   
-
-
 .ExpertSubmitForm{
     background: linear-gradient(90deg, #6D32D2 0%, #A444E5 100%);
-    width: 555px;
-    height: 93px;
+    width: 400px;
+    height: 67px;
     opacity: 1;
     border-radius: 100px;
     gap: 10px;
     margin: 0 auto;
-    margin-top: 110px;
+    margin-top: 100px;
 }
 
 .ExpertSubmitForm:hover{
@@ -222,54 +215,11 @@
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-    padding-top: 20px;
-}
-
-.Eclipse1{
-    width: 224px;
-    height: 226px;
-    opacity: 0.3;
-    top: 201px;
-    left: 684px;
-    border-width: 3px;
-    border-radius: 100%;
-    position: absolute;
-    border: 3px solid var(--, #8B89FF);
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
-    z-index: 0;
-}
-
-.Eclipse2{
-    width: 113px;
-    height: 113px;
-    opacity: 0.3;
-    top: 164px;
-    left: 1083px;
-    border-width: 3px;
-    border-radius: 100%;
-    position: absolute;
-    border: 3px solid var(--, #8B89FF);
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
-    z-index: 0;
-}
-
-.Eclipse3{
-    width: 1013.7230391501569px;
-    height: 361.3270017982416px;
-    opacity: 0.3;
-    top: 270px;
-    left: 422px;
-    border-width: 3px;
-    border-radius: 100%;
-    position: absolute;
-    border: 3px solid #F0F0F0;
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
-    transform: rotate(-19.16deg);
-    z-index: 0;
+    padding-top: 17px;
 }
 
 .ExpertSwitchBeginner{
