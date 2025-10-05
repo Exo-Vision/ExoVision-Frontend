@@ -17,8 +17,17 @@ export default function CustomSlider({
     return (
         <ConfigProvider
             theme={{
+                components: {
+                    Slider: {
+                        railSize: 12,
+                        handleSize: 20,
+                        handleSizeHover: 25,
+                    }
+                }
+                    ,
                 token: {
                     fontFamily: "Pretendard",
+                    fontsize: 16,
                 }
             }}
         >
@@ -32,11 +41,11 @@ export default function CustomSlider({
                 step={step}
                 styles={{
                     ...styles,
-                    root: { width: 969, height: 17, borderRadius: 100 },
-                    track: { background: segmentGradient(0, value/max, gradient) }, // for single-thumb
-                    rail: {background: "rgba(135,135,135,0.3)"},
+                    root: { width: 702.8, paddingRight: 0, marginRight: 0, paddingLeft: 0, marginLeft: -100, marginTop: 50.5 },
+                    track: { background: segmentGradient(0, value/max, gradient), borderRadius:100 }, // for single-thumb
+                    rail: {background: "rgba(135,135,135,0.3)", borderRadius:100},
                 }}
-                tooltip={{ open: true, placement: "bottom", formatter: formatter,  }}
+                tooltip={{ open: true, placement: "bottom", formatter: formatter, arrow: false  }}
 
             />
         </ConfigProvider>
