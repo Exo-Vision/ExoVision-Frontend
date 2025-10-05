@@ -23,12 +23,11 @@
     padding-top: 217.93px;
     font-family: Jura;
     font-weight: 700;
-    font-style: Bold;
     font-size: 70px;
     line-height: 100%;
-    letter-spacing: 3%;
+    letter-spacing: 2.1px;
     text-align: center;
-    text-shadow: 0px 0px 20px #FFFFFF73;
+    text-shadow: 0 0 20px #FFFFFF73;
     margin: 0 auto;
 }
 
@@ -36,10 +35,8 @@
     width: 409px;
     height: 60px;
     border-radius: 100px;
-    border-width: 2px;
     border: 2px solid rgba(139, 137, 255, 1);
-    margin: 0 auto;
-    margin-top: 46px;
+    margin: 46px auto 0;
 }
 
 .BeginnerTextFormBeginner{
@@ -48,20 +45,17 @@
     height: 52px;
     border-radius: 100px;
     gap: 10px;
-    margin:0 auto;
     display: inline-block;
-    margin-top: 4px;
-    margin-left: 4px;
+    margin: 4px auto 0 4px;
 }
 
 .BeginnerTextBeginner{
     color: #F0F0F0;
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     margin-top: 6px;
 }
@@ -78,10 +72,9 @@
 .BeginnerTextExpert{
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     margin-top: 6px;
 }
@@ -98,8 +91,7 @@
     border-radius: 30px;
     background: rgba(139, 137, 255, 0.15);
     backdrop-filter: blur(30px);
-    margin: 0 auto;
-    margin-top: 35px;
+    margin: 35px auto 0;
     position: absolute;
     z-index: 1;
 }
@@ -112,10 +104,9 @@
 
     font-family: Jura;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 45px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     color: #F0F0F0;
     position: absolute;
@@ -131,12 +122,10 @@
     height: 280px;
     opacity: 1;
     border-radius: 30px;
-    border-width: 1px;
-    background: var(--30, #8787874D);
-    border: 1px solid var(--, #888888);
+    background: #8787874D;
+    border: 1px solid #888888;
     backdrop-filter: blur(30px);
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px auto 0;
 }
 
 .BeginnerInputText {
@@ -144,10 +133,9 @@
     height: 48px;
     font-family: Pretendard;
     font-weight: 500;
-    font-style: Medium;
     font-size: 40px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: #F0F0F0;
     display: inline-block;
     margin-top: 43px;
@@ -157,7 +145,6 @@
 .BeginnerInputDetail {
     width: 33px;
     height: 33px;
-    border-width: 3px;
     border: 3px solid rgba(139, 137, 255, 1);
     color: rgba(139, 137, 255, 1);
     border-radius: 100%;
@@ -177,10 +164,9 @@
     height: 30px;
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 25px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: right;
     color: rgba(240, 240, 240, 1);
     display: inline-block;
@@ -201,10 +187,9 @@
     height: 30px;
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 25px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: rgba(240, 240, 240, 1);
     display: inline-block;
     margin-left: 30px;
@@ -217,8 +202,7 @@
     opacity: 1;
     border-radius: 100px;
     gap: 10px;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 100px auto 0;
 }
 
 .BeginnerSubmitForm:hover{
@@ -226,13 +210,12 @@
 }
 
 .BeginnerSubmit{
-    color: var(--2, #F0F0F0);
+    color: #F0F0F0;
     font-family: Pretendard;
     font-weight: 500;
-    font-style: Medium;
     font-size: 40px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     padding-top: 20px;
 }
@@ -243,11 +226,10 @@
     opacity: 0.3;
     top: 201px;
     left: 684px;
-    border-width: 3px;
     border-radius: 100%;
     position: absolute;
-    border: 3px solid var(--, #8B89FF);
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
+    border: 3px solid #8B89FF;
+    box-shadow: 0 4px 30px 0 #FFFFFF;
     z-index: 0;
 }
 
@@ -257,11 +239,10 @@
     opacity: 0.3;
     top: 164px;
     left: 1083px;
-    border-width: 3px;
     border-radius: 100%;
     position: absolute;
-    border: 3px solid var(--, #8B89FF);
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
+    border: 3px solid #8B89FF;
+    box-shadow: 0 4px 30px 0 #FFFFFF;
     z-index: 0;
 }
 
@@ -271,11 +252,10 @@
     opacity: 0.3;
     top: 270px;
     left: 422px;
-    border-width: 3px;
     border-radius: 100%;
     position: absolute;
     border: 3px solid #F0F0F0;
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
+    box-shadow: 0 4px 30px 0 #FFFFFF;
     transform: rotate(-19.16deg);
     z-index: 0;
 }
@@ -359,10 +339,9 @@
     width: auto;
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 20px;
     line-height: 25px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: rgba(240, 240, 240, 1);
     margin-top: 20px;
     margin-left: 89.5px;
@@ -379,9 +358,8 @@
 .BeginnerInputSliderWrapper > span{
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 25px;
     line-height: 25px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: rgba(240, 240, 240, 1);
 }
