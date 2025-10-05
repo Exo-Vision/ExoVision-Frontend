@@ -2,6 +2,8 @@ import './Result.css'
 import exovision from './../assets/EXOVISION.png'
 import { useNavigate } from 'react-router-dom'
 
+import POGraph from './../graph/POGraph'
+
 function Result() {
     const navigate = useNavigate();
 
@@ -52,7 +54,7 @@ function Result() {
                 </div>
             </div>
             <div className='ResultPOGraphTitle'>Predicted Orbit Graph</div>
-            <div></div>
+            <div className='ResultPOGraph'><POGraph/></div>
             <div className='ResultHalfGraphForm'>
                 <div className='ResultROCGraph'>
                     <div className='ResultHalfGraphTitle'>ROC Curve</div>
