@@ -30,17 +30,23 @@ const navigate = useNavigate();
 
      const predictBeginner = async () => {
         const data = {
-             koi_prad: test1, dec: test2, koi_smet: test3, planet_star_ratio: test4, planet_density_proxy: test5
+             koi_prad: test1,
+             dec: test2,
+             koi_smet: test3,
+             planet_star_ratio: test4,
+             planet_density_proxy: test5
         }
 
         try {
         const response = await apiClient.post('/api/v1/exoplanet/predict/beginner', data);
-        
-        return response.data;
+
+        // Navigate to result page with prediction data
+        navigate('/result', { state: { prediction: response.data, mode: 'beginner' } });
         } catch (error) {
-        throw error;
+        console.error('Prediction failed:', error);
+        alert('Prediction failed. Please check your input values.');
   }
-  
+
 };
 
 
