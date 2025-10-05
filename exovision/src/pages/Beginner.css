@@ -1,7 +1,7 @@
 .BeginnerBody{
-    background: linear-gradient(180deg, #1A1A1A 0%, #000235 100%);
-    width: 1920px;
-    padding-bottom: 143px;
+    background: linear-gradient(180deg, #00011C 0%, #000235 100%);
+    width: 100vw;
+    padding-bottom: 140px;
 }
 
 .BeginnerHeader{
@@ -23,12 +23,11 @@
     padding-top: 217.93px;
     font-family: Jura;
     font-weight: 700;
-    font-style: Bold;
     font-size: 70px;
     line-height: 100%;
-    letter-spacing: 3%;
+    letter-spacing: 2.1px;
     text-align: center;
-    text-shadow: 0px 0px 20px #FFFFFF73;
+    text-shadow: 0 0 20px #FFFFFF73;
     margin: 0 auto;
 }
 
@@ -36,10 +35,8 @@
     width: 409px;
     height: 60px;
     border-radius: 100px;
-    border-width: 2px;
     border: 2px solid rgba(139, 137, 255, 1);
-    margin: 0 auto;
-    margin-top: 46px;
+    margin: 46px auto 0;
 }
 
 .BeginnerTextFormBeginner{
@@ -48,20 +45,17 @@
     height: 52px;
     border-radius: 100px;
     gap: 10px;
-    margin:0 auto;
     display: inline-block;
-    margin-top: 4px;
-    margin-left: 4px;
+    margin: 4px auto 0 4px;
 }
 
 .BeginnerTextBeginner{
     color: #F0F0F0;
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     margin-top: 6px;
 }
@@ -78,12 +72,12 @@
 .BeginnerTextExpert{
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     margin-top: 6px;
+    color: #8B89FF;
 }
 
 .BeginnerDetailFormBox{
@@ -98,24 +92,27 @@
     border-radius: 30px;
     background: rgba(139, 137, 255, 0.15);
     backdrop-filter: blur(30px);
-    margin: 0 auto;
-    margin-top: 35px;
+    margin: 35px auto 0;
     position: absolute;
     z-index: 1;
+}
+
+.BeginnerDetailTextForm{
+    width: 1155px;
+    height: 90px;
+    padding-top: 70px;
+    padding-left: 37px;
 }
 
 .BeginnerDetail{
     width: 1180px;
     height: 90px;
-    top: 541px;
-    left: 383px;
 
     font-family: Jura;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 45px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     color: #F0F0F0;
     position: absolute;
@@ -123,40 +120,41 @@
 }
 
 .BeginnerUI{
-    padding-top: 130px;
+    padding-top: 36px;
 }
 
 .BeginnerUIForm{
-    width: 1234px;
-    height: 280px;
+    width: 1000px;
+    height: 200px;
     opacity: 1;
     border-radius: 30px;
-    border-width: 1px;
-    background: var(--30, #8787874D);
-    border: 1px solid var(--, #888888);
+    background: #8787874D;
+    border: 1px solid #888888;
     backdrop-filter: blur(30px);
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 39px;
 }
 
 .BeginnerInputText {
     width: auto;
     height: 48px;
+
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
+
     color: #F0F0F0;
     display: inline-block;
-    margin-top: 43px;
-    margin-left: 57px;
+    margin-top: 36px;
+    margin-left: 93px;
 }
 
 .BeginnerInputDetail {
-    width: 33px;
-    height: 33px;
+    width: 34px;
+    height: 34px;
     border-width: 3px;
     border: 3px solid rgba(139, 137, 255, 1);
     color: rgba(139, 137, 255, 1);
@@ -165,60 +163,133 @@
     display: inline-block;
     margin-left: 20px;
     font-size: 20px;
-    z-index: 1;
 }
 
 .BeginnerInputDetail:hover {
     cursor: pointer;
 }
 
-.BeginnerInputMin {
-    width: 36px;
-    height: 30px;
+.BeginnerInputMin1{
+    height: 24px;
+
     font-family: Pretendard;
     font-weight: 400;
     font-style: Regular;
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: right;
+
+    color: rgba(240, 240, 240, 1);
+    margin-left: 97px;
+    margin-top: 40px;
+}
+
+.BeginnerInputMin2{
+    height: 24px;
+
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: right;
+
     color: rgba(240, 240, 240, 1);
-    display: inline-block;
-    margin-top: 65px;
-    margin-left: 66px
+    margin-left: 97px;
+    margin-top: 40px;
 }
 
-.BeginnerInput{
-    width: 969px;
-    height: 17px;
+.BeginnerInputMin3{
+    height: 24px;
+
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+
+    color: rgba(240, 240, 240, 1);
+    margin-left: 70px;
+    margin-top: 40px;
+    margin-top: 40px;
+}
+
+.BeginnerInputMin4{
+    height: 24px;
+
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+
+    color: rgba(240, 240, 240, 1);
+    margin-left: 116px;
+    margin-top: 40px;
+}
+
+.BeginnerInputMin5{
+    height: 24px;
+
+    font-family: Pretendard;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+
+    color: rgba(240, 240, 240, 1);
+    margin-left: 92px
+}
+
+/*.BeginnerInput{
+    width: 702.8px;
+    height: 12.33px;
     border-radius: 100px;
-    margin-left: 30px;
+    margin-left: 21.74px;
+}*/
+
+.BeginnerInputSliderWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
 .BeginnerInputMax{
-    width: 45px;
-    height: 30px;
+    height: 24px;
+
     font-family: Pretendard;
     font-weight: 400;
     font-style: Regular;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
+
     color: rgba(240, 240, 240, 1);
-    display: inline-block;
-    margin-left: 30px;
+    margin-top: 45px;
+}
+
+.BeginnerInputMaxText{
+    position: absolute;
+    left: 890px;
 }
 
 .BeginnerSubmitForm{
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
-    width: 555px;
-    height: 93px;
-    opacity: 1;
+    width: 400px;
+    height: 67px;
     border-radius: 100px;
     gap: 10px;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 100px auto 0;
 }
 
 .BeginnerSubmitForm:hover{
@@ -226,15 +297,15 @@
 }
 
 .BeginnerSubmit{
-    color: var(--2, #F0F0F0);
+    color: #F0F0F0;
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 17px;
 }
 
 .Eclipse1{
@@ -243,11 +314,10 @@
     opacity: 0.3;
     top: 201px;
     left: 684px;
-    border-width: 3px;
     border-radius: 100%;
     position: absolute;
-    border: 3px solid var(--, #8B89FF);
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
+    border: 3px solid #8B89FF;
+    box-shadow: 0 4px 30px 0 #FFFFFF;
     z-index: 0;
 }
 
@@ -257,11 +327,10 @@
     opacity: 0.3;
     top: 164px;
     left: 1083px;
-    border-width: 3px;
     border-radius: 100%;
     position: absolute;
-    border: 3px solid var(--, #8B89FF);
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
+    border: 3px solid #8B89FF;
+    box-shadow: 0 4px 30px 0 #FFFFFF;
     z-index: 0;
 }
 
@@ -271,11 +340,10 @@
     opacity: 0.3;
     top: 270px;
     left: 422px;
-    border-width: 3px;
     border-radius: 100%;
     position: absolute;
     border: 3px solid #F0F0F0;
-    box-shadow: 0px 4px 30px 0px #FFFFFF;
+    box-shadow: 0 4px 30px 0 #FFFFFF;
     transform: rotate(-19.16deg);
     z-index: 0;
 }
@@ -298,8 +366,8 @@
 .BeginnerInputDetailBox1{
     width: 519px;
     height: 90px;
-    top: 862px;
-    left: 782px;
+    top: 743px;
+    left: 843px;
     border-radius: 10px;
     gap: 10px;
     background-color: rgba(26, 26, 26, 0.3);
@@ -310,8 +378,8 @@
 .BeginnerInputDetailBox2{
     width: 519px;
     height: 115px;
-    top: 1190px;
-    left: 840px;
+    top: 985px;
+    left: 887px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;
@@ -322,8 +390,8 @@
 .BeginnerInputDetailBox3{
     width: 519px;
     height: 140px;
-    top: 1520px;
-    left: 729px;
+    top: 1223px;
+    left: 803px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;
@@ -334,8 +402,8 @@
 .BeginnerInputDetailBox4{
     width: 519px;
     height: 140px;
-    top: 1850px;
-    left: 913px;
+    top: 1463px;
+    left: 943px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;
@@ -346,8 +414,8 @@
 .BeginnerInputDetailBox5{
     width: 519px;
     height: 90px;
-    top: 2184px;
-    left: 762px;
+    top: 1711px;
+    left: 830px;
     border-radius: 10px;
     gap: 10px;
     position: absolute;
@@ -359,29 +427,11 @@
     width: auto;
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 20px;
     line-height: 25px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     color: rgba(240, 240, 240, 1);
     margin-top: 20px;
     margin-left: 89.5px;
 }
 
-.BeginnerInputSliderWrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 60px;
-}
-
-.BeginnerInputSliderWrapper > span{
-    font-family: Pretendard;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 25px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    color: rgba(240, 240, 240, 1);
-}

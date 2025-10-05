@@ -27,12 +27,11 @@
     padding-top: 217.93px;
     font-family: Jura;
     font-weight: 700;
-    font-style: Bold;
     font-size: 70px;
     line-height: 100%;
-    letter-spacing: 3%;
+    letter-spacing: 2.1px;
     text-align: center;
-    text-shadow: 0px 0px 20px #FFFFFF73;
+    text-shadow: 0 0 20px #FFFFFF73;
     margin: 0 auto;
 }
 
@@ -40,10 +39,8 @@
     width: 409px;
     height: 60px;
     border-radius: 100px;
-    border-width: 2px;
     border: 2px solid rgba(139, 137, 255, 1);
-    margin: 0 auto;
-    margin-top: 46px;
+    margin: 46px auto 0;
 }
 
 .ExpertTextFormBeginner{
@@ -51,19 +48,16 @@
     height: 52px;
     border-radius: 100px;
     gap: 10px;
-    margin:0 auto;
     display: inline-block;
-    margin-top: 4px;
-    margin-left: 4px;
+    margin: 4px auto 0 4px;
 }
 
 .ExpertTextBeginner{
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     margin-top: 6px;
     color: rgba(139, 137, 255, 1);
@@ -82,10 +76,9 @@
 .ExpertTextExpert{
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     margin-top: 6px;
     color: rgba(240, 240, 240, 1);
@@ -103,8 +96,7 @@
     border-radius: 30px;
     background: rgba(139, 137, 255, 0.15);
     backdrop-filter: blur(30px);
-    margin: 0 auto;
-    margin-top: 35px;
+    margin: 35px auto 0;
     position: absolute;
     z-index: 1;
 }
@@ -121,10 +113,9 @@
     
     font-family: Jura;
     font-weight: 400;
-    font-style: Regular;
     font-size: 30px;
     line-height: 45px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     color: #F0F0F0;
     position: absolute;
@@ -169,10 +160,9 @@
 
     font-family: Pretendard;
     font-weight: 400;
-    font-style: Regular;
     font-size: 40px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: right;
     color: rgba(255, 255, 255, 1);
 }
@@ -195,6 +185,7 @@
     margin-left: 20px;
 }
 
+
 .ExpertSubmitForm{
     background: linear-gradient(90deg, #6D32D2 0%, #A444E5 100%);
     width: 400px;
@@ -211,13 +202,13 @@
 }
 
 .ExpertSubmit{
-    color: var(--2, #F0F0F0);
+    color: #F0F0F0;
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
     font-size: 30px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     padding-top: 17px;
 }
