@@ -8,6 +8,7 @@ import POGraph from './../graph/POGraph'
 import gradient_border_400_67 from '../assets/gradient_border_400_67.svg'
 import gradient_border_200_53 from '../assets/gradient_border_200_53.svg'
 import top_floating_button from '../assets/top_floating_button.svg'
+import TransitLightCurveGraph from "./TransitLightCurveGraph";
 function Result() {
     const navigate = useNavigate();
 
@@ -72,7 +73,7 @@ function Result() {
             <div className='ResultHalfGraphForm'>
                 <div className='ResultTLCGraph'>
                     <div className='ResultHalfGraphTitle'>Transit Light Curve</div>
-                    <div></div>
+                    <TransitLightCurveGraph />
                 </div>
             </div>
 
