@@ -716,3 +716,11 @@
 .ResultRefine:hover, .ResultRestart:hover, .ResultHeader:hover{
     cursor: pointer;
 }
+
+.ResultTopFloatingButton{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 100;
+
+}

@@ -3,6 +3,7 @@ import exovision from './../assets/EXOVISION.png'
 import { useNavigate } from 'react-router-dom'
 import gradient_border_400_67 from '../assets/gradient_border_400_67.svg'
 import gradient_border_200_53 from '../assets/gradient_border_200_53.svg'
+import top_floating_button from '../assets/top_floating_button.svg'
 function Result() {
     const navigate = useNavigate();
 
@@ -86,6 +87,14 @@ function Result() {
                 </div>
                 <div className='ResultRestart' onClick={() => navigate("/")}><div className='ResultRestartText'>Restart Mission</div></div>
             </div>
+            <button
+                type="button"
+                className="ResultTopFloatingButton"
+                aria-label="Scroll to top"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+                <img src={top_floating_button} alt="" aria-hidden="true" />
+            </button>
         </div>
     );
 }

@@ -18,3 +18,16 @@ img {
     -o-user-drag: none;
     user-drag: none;
 }
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-use-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
