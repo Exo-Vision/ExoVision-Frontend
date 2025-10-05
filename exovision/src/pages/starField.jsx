@@ -1,24 +1,55 @@
 import { useEffect, useRef } from "react";
+
 /**
- * 배경에 별을 그리는 컴포넌트 입니다.
- * @param {number} maxStars - 최대로 생성할 별의 개수
- * @param {number} density - maxStars가 없을 때 별의 개수를 결정하는 비율
- * @param {number} twinkleAmplitude - 별이 반짝이는 밝기 변화 비율
- * @param {number} twinkleSpeedRange - 별이 반짝이는 속도 비율
- * @param {number} radiusRange - 별 크기 비율
- * @param {number} colorVariance - hue 색상 분포도
- * @param {number} zIndex - 컴포넌트의 z-index
- * @param {string} className - 컴포넌트의 Class Name
- * @param {boolean} followMouse - true로 설정 시, mouse 이벤트를 통해 camera를 이동합니다.
- * @param {number} parallaxStrength - followMouse가 true일 때, camera 이동 속도를 조절합니다.(1)
- * @param {number} parallaxEase - followMouse가 true일 때, camera 이동 속도를 조절합니다.(2)
- * @param {boolean} idleDrift - followMouse가 true일 때, camera 이동 속도를 조절합니다.(3)
- * @param {number} idleDriftStrength - followMouse가 true일 때, camera 이동 속도를 조절합니다.(4)
- * @param {number} idleDriftSpeed - followMouse가 true일 때, camera 이동 속도를 조절합니다.(5)
- * @param {boolean} respectReducedMotion - true로 설정 시, 브라우저의 애니메이션 최소화 설정을 무시합니다
- * @returns
+ * StarField — GPU-friendly starry sky canvas with optional pointer parallax and meteors.
  *
- * */
+ * ─ Appearance & Density ─
+ * @param {number}   [maxStars]                         Exact star count. If omitted, star count is derived from `density`.
+ * @param {number}   [density=0.12]                     Stars per 10k px² (used when `maxStars` is not provided).
+ * @param {number}   [twinkleAmplitude=0.1]             Twinkle intensity (0–1).
+ * @param {[number,number]} [twinkleSpeedRange=[0.2,0.5]] Twinkle speed range in cycles/sec.
+ * @param {[number,number]} [radiusRange=[0.4,1.4]]     Star radius range in CSS px.
+ * @param {number}   [colorVariance=2]                  Hue variance around a blue base (larger = wider color spread).
+ * @param {number}   [zIndex=0]                         Canvas z-index.
+ * @param {string}   [className]                        Extra class name for the canvas.
+ *
+ * ─ Parallax (Pointer-driven Camera) ─
+ * @param {boolean}  [followMouse=true]                 Enable pointer-following camera.
+ * @param {number}   [parallaxStrength=0.08]            Max camera shift as a fraction of min(viewport) (e.g., 0.05 = 5%).
+ * @param {number}   [parallaxEase=0.08]                Camera easing factor (0–1; higher = snappier).
+ * @param {boolean}  [idleDrift=true]                   When idle, gently move the camera in a small loop.
+ * @param {number}   [idleDriftStrength]                Idle drift radius in px (default ≈ 0.5% of min(viewport)).
+ * @param {number}   [idleDriftSpeed=0.05]              Idle drift speed in cycles/sec.
+ * @param {boolean}  [respectReducedMotion=true]        Honor OS “Reduce motion” (disables twinkle/parallax/meteors when true).
+ *
+ * ─ Meteors / Comets ─
+ * @param {boolean}  [meteorsEnabled=true]              Enable occasional meteors.
+ * @param {[number,number]} [meteorRateRange=[3.5,7.5]] Spawn interval in seconds (min, max).
+ * @param {[number,number]} [meteorSpeedRange=[600,1100]] Meteor speed in px/sec.
+ * @param {[number,number]} [meteorLengthRange=[140,260]] Tail length in px.
+ * @param {[number,number]} [meteorThicknessRange=[2,3.2]] Stroke width in px.
+ * @param {[number,number]} [meteorHueRange=[195,225]]   Hue range for meteor color (HSL hue).
+ * @param {number}   [meteorSaturation=90]              Meteor saturation (%).
+ * @param {number}   [meteorLightnessHead=98]           Head lightness (%).
+ * @param {number}   [meteorLightnessTail=85]           Tail lightness (%).
+ * @param {number}   [meteorShadowBlur=12]              Glow blur in px.
+ *
+ * @returns {JSX.Element} Transparent full-bleed <canvas/> that draws the starfield.
+ *
+ * @example
+ * // Simple usage
+ * <StarField density={0.14} followMouse parallaxStrength={0.05} />
+ *
+ * @example
+ * // With meteors and stronger parallax
+ * <StarField
+ *   followMouse
+ *   parallaxStrength={0.06}
+ *   twinkleAmplitude={0.6}
+ *   meteorsEnabled
+ *   meteorRateRange={[3, 6]}
+ * />
+ */
 export function StarField({
                               maxStars,
                               density = 0.12,
@@ -36,6 +67,18 @@ export function StarField({
                               idleDriftStrength,
                               idleDriftSpeed = 0.05,
                               respectReducedMotion = true,
+
+                              // ==== METEORS: public knobs ====
+                              meteorsEnabled = true,
+                              meteorRateRange = [7, 10],        // average seconds between spawns (min, max)
+                              meteorSpeedRange = [600, 1100],      // px/sec
+                              meteorLengthRange = [140, 260],      // px tail length
+                              meteorThicknessRange = [2, 3.2],     // px stroke width
+                              meteorHueRange = [195, 225],         // bluish-white hue
+                              meteorSaturation = 90,               // %
+                              meteorLightnessHead = 98,            // %
+                              meteorLightnessTail = 85,            // %
+                              meteorShadowBlur = 12,               // px glow
                           }) {
     const canvasRef = useRef(null);
     const rafRef = useRef(null);
@@ -60,7 +103,7 @@ export function StarField({
             camY: 0,
             targetX: 0,
             targetY: 0,
-            lastPointerTs: -1e9, // ensure idle drift kicks in initially
+            lastPointerTs: -1e9,
         };
 
         const rnd = (min, max) => Math.random() * (max - min) + min;
@@ -89,15 +132,7 @@ export function StarField({
                 const speed = rnd(twinkleSpeedRange[0], twinkleSpeedRange[1]);
                 const phase = rnd(0, Math.PI * 2);
                 const r = rnd(radiusRange[0], radiusRange[1]);
-                return {
-                    x: Math.random() * state.w,
-                    y: Math.random() * state.h,
-                    r,
-                    baseAlpha,
-                    hue,
-                    speed,
-                    phase,
-                };
+                return { x: Math.random() * state.w, y: Math.random() * state.h, r, baseAlpha, hue, speed, phase };
             });
         }
 
@@ -130,9 +165,95 @@ export function StarField({
             state.targetY = 0;
         }
 
+        // ==== METEORS: state & helpers ====
+        let meteors = []; // {x,y, ux,uy, speed, len, th, hue, alpha}
+        let nextMeteorAt = 0; // timestamp (ms) when to spawn next
+        const OUT_MARGIN = 120; // spawn/kill margin outside view
+
+        function scheduleNextMeteor(now) {
+            // Poisson-ish: random interval in [min,max] sec
+            const delay = rnd(meteorRateRange[0], meteorRateRange[1]) * 1000;
+            nextMeteorAt = now + delay;
+        }
+
+        function spawnMeteor(now) {
+            // Start somewhere around top-left OUTSIDE the view
+            const sx = rnd(-OUT_MARGIN, state.w * 0.1);
+            const sy = rnd(-OUT_MARGIN, state.h * 0.2);
+
+            // Direction ~45° (down-right) with small jitter
+            const deg = rnd(35, 55);
+            const rad = (deg * Math.PI) / 180;
+            const ux = Math.cos(rad);
+            const uy = Math.sin(rad);
+
+            const speed = rnd(meteorSpeedRange[0], meteorSpeedRange[1]); // px/s
+            const len = rnd(meteorLengthRange[0], meteorLengthRange[1]); // px
+            const th = rnd(meteorThicknessRange[0], meteorThicknessRange[1]); // px
+
+            const hue = rnd(meteorHueRange[0], meteorHueRange[1]);
+
+            meteors.push({
+                x: sx,
+                y: sy,
+                ux,
+                uy,
+                speed,
+                len,
+                th,
+                hue,
+                alpha: 1, // can fade if you want
+            });
+
+            scheduleNextMeteor(now);
+        }
+
+        // draw a single meteor: head at (x,y), tail = head - (ux,uy)*len
+        function drawMeteor(m) {
+            const headX = m.x;
+            const headY = m.y;
+            const tailX = m.x - m.ux * m.len;
+            const tailY = m.y - m.uy * m.len;
+
+            // gradient along trail: bright near head, fade to transparent
+            const grad = ctx.createLinearGradient(headX, headY, tailX, tailY);
+            grad.addColorStop(0, `hsla(${m.hue}, ${meteorSaturation}%, ${meteorLightnessHead}%, ${0.95 * m.alpha})`);
+            grad.addColorStop(0.25, `hsla(${m.hue}, ${meteorSaturation}%, ${meteorLightnessTail}%, ${0.55 * m.alpha})`);
+            grad.addColorStop(1, `hsla(${m.hue}, ${meteorSaturation}%, ${meteorLightnessTail}%, 0)`);
+
+            ctx.save();
+            ctx.globalCompositeOperation = "lighter"; // nice additive glow
+            ctx.lineCap = "round";
+            ctx.lineWidth = m.th;
+            ctx.shadowBlur = meteorShadowBlur;
+            ctx.shadowColor = `hsla(${m.hue}, ${meteorSaturation}%, ${meteorLightnessHead}%, ${0.9 * m.alpha})`;
+
+            // trail
+            ctx.beginPath();
+            ctx.moveTo(tailX, tailY);
+            ctx.lineTo(headX, headY);
+            ctx.strokeStyle = grad;
+            ctx.stroke();
+
+            // optional head flare
+            ctx.beginPath();
+            ctx.fillStyle = `hsla(${m.hue}, ${meteorSaturation}%, ${meteorLightnessHead}%, ${0.9 * m.alpha})`;
+            ctx.arc(headX, headY, m.th * 1.2, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        // ==== /METEORS ====
+
+        let lastTs = 0;
+
         function drawFrame(ts) {
             if (!running) return;
             const t = ts / 1000;
+            const now = ts;
+            const dt = lastTs ? Math.min(0.05, (ts - lastTs) / 1000) : 0; // clamp 50ms
+            lastTs = ts;
 
             // idle drift after 1.2s of no input
             if (idleDrift && followMouse && !reduced) {
@@ -149,11 +270,12 @@ export function StarField({
             state.camX += (state.targetX - state.camX) * clamp(parallaxEase, 0.01, 0.5);
             state.camY += (state.targetY - state.camY) * clamp(parallaxEase, 0.01, 0.5);
 
-            // draw
+            // clear & translate
             ctx.clearRect(0, 0, state.w, state.h);
             ctx.save();
             if (!reduced) ctx.translate(state.camX, state.camY);
 
+            // stars
             for (let i = 0; i < stars.length; i++) {
                 const s = stars[i];
                 let alpha = s.baseAlpha;
@@ -168,6 +290,34 @@ export function StarField({
                 ctx.fillStyle = `hsla(${s.hue}, 100%, 96%, ${alpha})`;
                 ctx.fill();
             }
+
+            // ==== METEORS: update + draw ====
+            if (meteorsEnabled && !reduced) {
+                // spawn
+                if (now >= nextMeteorAt) spawnMeteor(now);
+
+                // update & cull
+                const w = state.w, h = state.h;
+                for (let i = meteors.length - 1; i >= 0; i--) {
+                    const m = meteors[i];
+                    m.x += m.ux * m.speed * dt;
+                    m.y += m.uy * m.speed * dt;
+
+                    // (optional) very slight fade over time:
+                    m.alpha = Math.max(0, m.alpha - dt * 0.12);
+
+                    // off-screen?
+                    if (m.x > w + OUT_MARGIN || m.y > h + OUT_MARGIN || m.alpha <= 0) {
+                        meteors.splice(i, 1);
+                        continue;
+                    }
+                }
+
+                // draw after update
+                for (let i = 0; i < meteors.length; i++) drawMeteor(meteors[i]);
+            }
+            // ==== /METEORS ====
+
             ctx.restore();
             rafRef.current = requestAnimationFrame(drawFrame);
         }
@@ -175,6 +325,8 @@ export function StarField({
         // init
         resize();
         rafRef.current = requestAnimationFrame(drawFrame);
+        // schedule first meteor so it doesn’t pop immediately
+        scheduleNextMeteor(performance.now() + rnd(400, 1200));
 
         // listeners — use document for robustness
         const onResize = () => resize();
@@ -184,7 +336,6 @@ export function StarField({
         window.addEventListener("blur", resetTarget);
         document.addEventListener("mouseleave", resetTarget);
 
-        // pause when hidden
         const onVis = () => {
             if (document.hidden) {
                 if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -219,6 +370,18 @@ export function StarField({
         idleDriftStrength,
         idleDriftSpeed,
         respectReducedMotion,
+
+        // meteors
+        meteorsEnabled,
+        meteorRateRange,
+        meteorSpeedRange,
+        meteorLengthRange,
+        meteorThicknessRange,
+        meteorHueRange,
+        meteorSaturation,
+        meteorLightnessHead,
+        meteorLightnessTail,
+        meteorShadowBlur,
     ]);
 
     return (

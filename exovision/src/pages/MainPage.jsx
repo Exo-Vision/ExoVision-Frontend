@@ -14,12 +14,21 @@ export default function MainPage() {
         <div className="backGround">
             {/* 별 배경 */}
             <StarField
-                density={8}
-                followMouse
+                density={5}
+                followMouse = {false}
+                twinkleAmplitude={0.3}
+                radiusRange={[0.05, 1.5]}
                 parallaxStrength={0.02}
                 parallaxEase={0.05}
                 respectReducedMotion={false} // force motion in case OS reduce-motion is ON
                 aria-hidden="true"
+
+                meteorsEnabled
+                meteorRateRange={[20, 30]}
+                meteorSpeedRange={[200, 400]}
+                meteorLengthRange={[180, 320]}
+                meteorThicknessRange={[2.2, 3.5]}
+                meteorHueRange={[190, 220]}
             />
 
             {/* 로고 배경 */}
@@ -50,7 +59,7 @@ export default function MainPage() {
                     <div className="logButton">
                         {/*둥근 모서리의 그라디언트 테두리가 Pure CSS로 작성이 어려워, 벡터 이미지로 대체했습니다.*/}
                         <img src={gradient_border} alt="border" aria-hidden="true"/>
-                        <a href="">
+                        <a href="/history">
                             Discovery Log
                         </a>
                     </div>
