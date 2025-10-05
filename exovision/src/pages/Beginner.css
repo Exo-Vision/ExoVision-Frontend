@@ -1,7 +1,5 @@
 .BeginnerBody{
     background: linear-gradient(180deg, #1A1A1A 0%, #000235 100%);
-    width: 1920px;
-    padding-bottom: 143px;
     width: 100vw;
     padding-bottom: 140px;
 }
@@ -121,8 +119,6 @@
 }
 
 .BeginnerUIForm{
-    width: 1234px;
-    height: 280px;
     width: 1000px;
     height: 200px;
     opacity: 1;
