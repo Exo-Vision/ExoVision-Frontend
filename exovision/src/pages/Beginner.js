@@ -4,9 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import EXOVISION from './../assets/EXOVISION.png'
 import CustomSlider from "./CustomSlider";
 import background from './../assets/background.png'
+import axios from 'axios'
+
+import apiClient from './exoplanetApi';
 
 function UserPage() {
 const navigate = useNavigate();
+
+
 
     const [detail1, setDetail1] = useState(0);
     const [detail2, setDetail2] = useState(0);
@@ -19,6 +24,25 @@ const navigate = useNavigate();
     const [test3, setTest3] = useState(0.001);
     const [test4, setTest4] = useState(1);
     const [test5, setTest5] = useState(0.1);
+
+
+
+
+     const predictBeginner = async () => {
+        const data = {
+             koi_prad: test1, dec: test2, koi_smet: test3, planet_star_ratio: test4, planet_density_proxy: test5
+        }
+
+        try {
+        const response = await apiClient.post('/api/v1/exoplanet/predict/beginner', data);
+        
+        return response.data;
+        } catch (error) {
+        throw error;
+  }
+  
+};
+
 
     return (
         <div className='BeginnerBody'>
@@ -45,7 +69,7 @@ const navigate = useNavigate();
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
                         <span className='BeginnerInputMin1'>0.5</span>
-                        <CustomSlider min={0.5} max={500} step={0.5} formatter={(v) => `${v} days`} gradient={["#6D32D2", "#A444E5"]} value={test1} setValue={setTest1}/>
+                        <CustomSlider min={0.8} max={200346} step={1} formatter={(v) => `${v} days`} gradient={["#6D32D2", "#A444E5"]} value={test1} setValue={setTest1}/>
                         <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>500</div></span>
                     </div>
                     </div></div>
@@ -56,9 +80,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail2(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span className='BeginnerInputMin2'>0.1</span>
-                        <CustomSlider min={0.1} max={24} step={0.3} formatter={(v) => `${v} hours`} gradient={["#6D32D2", "#A444E5"]} value={test2} setValue={setTest2}/>
-                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>24</div></span>
+                        <span className='BeginnerInputMin2'>-89.47</span>
+                        <CustomSlider min={-89.47} max={89.08} step={1} formatter={(v) => `${v} hours`} gradient={["#6D32D2", "#A444E5"]} value={test2} setValue={setTest2}/>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>89.08</div></span>
                     </div>
                     </div></div>
 
@@ -68,9 +92,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail3(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span className='BeginnerInputMin3'>0.001</span>
-                        <CustomSlider min={0.001} max={10} step={0.005} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]} value={test3} setValue={setTest3}/>
-                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>10</div></span>
+                        <span className='BeginnerInputMin3'>-2.5</span>
+                        <CustomSlider min={-2.5} max={0.56} step={0.005} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]} value={test3} setValue={setTest3}/>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>0.56</div></span>
                     </div>
                     </div></div>
 
@@ -80,9 +104,9 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail4(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span className='BeginnerInputMin4'>1</span>
-                        <CustomSlider min={1} max={100} step={0.1} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]}  value={test4} setValue={setTest4}/>
-                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>100</div></span>
+                        <span className='BeginnerInputMin4'>0.14</span>
+                        <CustomSlider min={0.14} max={10905} step={0.5} formatter={(v) => `${v} %`} gradient={["#6D32D2", "#A444E5"]}  value={test4} setValue={setTest4}/>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>10905</div></span>
                     </div>
                     </div></div>
                 <div><div className='BeginnerUIForm'>
@@ -91,16 +115,16 @@ const navigate = useNavigate();
                         <div className='BeginnerInputDetail' onMouseOver={() => setDetail5(1)}>!</div>
                     </div>
                     <div className='BeginnerInputSliderWrapper'>
-                        <span className='BeginnerInputMin5'>0.5</span>
-                        <CustomSlider min={0.1} max={30} step={0.1} formatter={(v) => `x ${v}`} gradient={["#6D32D2", "#A444E5"]} value={test5} setValue={setTest5}/>
-                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>500</div></span>
+                        <span className='BeginnerInputMin5'>0.01</span>
+                        <CustomSlider min={0.01} max={27886337760646} step={1000} formatter={(v) => `x ${v}`} gradient={["#6D32D2", "#A444E5"]} value={test5} setValue={setTest5}/>
+                        <span className='BeginnerInputMax'><div className='BeginnerInputMaxText'>27886337760646</div></span>
                     </div>
                     </div></div>
             </div>
             <div className='Eclipse1'></div>
             <div className='Eclipse2'></div>
             <div className='Eclipse3'></div>
-            <div><div className='BeginnerSubmitForm' onClick={() => console.log(test1, test2, test3, test4, test5)}><div className='BeginnerSubmit'>Start the Journey</div></div></div>
+            <div><div className='BeginnerSubmitForm' onClick={() => predictBeginner()}><div className='BeginnerSubmit'>Start the Journey</div></div></div>
             
             <div className='BeginnerSwitchExpert' onClick={() => navigate("/expert")}></div>
             {(detail1 === 1) && (<div className='BeginnerInputDetailBox1' onMouseOut={() => setDetail1(0)}><div className='BeginnerInputDetailAdd'>The time it takes for a planet to complete<br/>one full orbit around its host star.</div></div>)}
