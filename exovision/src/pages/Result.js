@@ -8,7 +8,8 @@ import POGraph from './../graph/POGraph'
 import gradient_border_400_67 from '../assets/gradient_border_400_67.svg'
 import gradient_border_200_53 from '../assets/gradient_border_200_53.svg'
 import top_floating_button from '../assets/top_floating_button.svg'
-import TransitLightCurveGraph from "./TransitLightCurveGraph";
+import TransitLightCurveGraph from "../graph/TransitLightCurveGraph";
+import MyScatterPlot from "../graph/MyScatterPlot";
 function Result() {
     const navigate = useNavigate();
 
@@ -55,7 +56,7 @@ function Result() {
             </div>
             <div className='ResultExpertGraphForm'>
                 <div className='ResultExpertGraphTitle'>Orbital Period vs Planet Radius</div>
-                <div></div>
+                <MyScatterPlot  />
             </div>
             <div className='ResultExpertGraphForm'>
                 <div className='ResultExpertGraphTitle'>Orbital Period vs Transit Depth</div>
