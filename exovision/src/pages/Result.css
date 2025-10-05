@@ -1,7 +1,7 @@
 .ResultBody{
-    background: linear-gradient(180deg, #1A1A1A 0%, #000235 100%);
+    background: linear-gradient(180deg, #00011C 0%, #000235 100%);
     width: 1920px;
-    padding-bottom: 129px;
+    padding-bottom: 122px;
 }
 
 .ResultHeader{
@@ -73,9 +73,9 @@
 } 
 
 .ResultMissionForm{
-    width: 1234px;
-    height: 306px;
-    border-radius: 30px;
+    width: 983px;
+    height: 243px;
+    border-radius: 16px;
     background: rgba(139, 137, 255, 0.15);
     margin: 0 auto;
     margin-top: 20px;
@@ -83,87 +83,87 @@
 }
 
 .ResultMissionTitle{
-    width: 1155px;
-    height: 45px;
+    width: auto;
+    height: 36px;
 
     font-family: Jura;
     font-weight: 500;
     font-style: Medium;
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 24px;
+    line-height: 35.85px;
     letter-spacing: 0%;
     text-align: center;
 
     background: linear-gradient(90deg, rgba(139, 137, 255, 1) 0%, rgba(115, 198, 228, 1) 100%);
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 30px;
+    margin-top: 23.9px;
 }
 
 .ResultMissionDetail{
-    width: 1155px;
-    height: 180px;
+    width: auto;
+    height: 144px;
 
     font-family: Jura;
     font-weight: 400;
     font-style: Regular;
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 24px;
+    line-height: 35.85px;
     letter-spacing: 0%;
     text-align: center;
 
     color: rgba(240, 240, 240, 1);
-    margin-top: 20px;
+    margin-top: 15.78px;
 }
 
 .ResultForm1{
-    width: 1234px;
+    width: 983px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 41px;
 }
 
 .ResultClassifyForm{
     display: inline-block;
-    width: 604px;
-    height: 170px;
+    width: 486.5px;
+    height: 135px;
     text-align: center;
     overflow: hidden;
 }
 
 .ResultProbableForm{
     display: inline-block;
-    width: 604px;
-    height: 170px;
+    width: 486.5px;
+    height: 135px;
     text-align: center;
     background: rgba(139, 137, 255, 0.15);
-    margin-left: 25px;
+    margin-left: 10px;
     border-radius: 20px;
     overflow: hidden;
 }
 
 .ResultClassifyTitle{
-    height: 36px;
+    height: 29px;
 
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
     margin: 0 auto;
     
     color: rgba(240, 240, 240, 1);
-    margin-top: 21px;
+    margin-top: 25.08px;
 }
 
 .ResultClassifyDetail{
-    height: 60px;
+    height: 48px;
 
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -172,31 +172,31 @@
     background: linear-gradient(90deg, rgba(139, 137, 255, 1) 0%, rgba(115, 198, 228, 1) 100%);
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 11px;
+    margin-top: 8.76px;
 }
 
 .ResultProbableTitle{
-    height: 36px;
+    height: 29px;
 
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
 
     color: rgba(240, 240, 240, 1);
-    margin-top: 32px;
+    margin-top: 25.08px;
 }
 
 .ResultProbableDetail{
-    height: 60px;
+    height: 48px;
     
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -204,19 +204,19 @@
     background: linear-gradient(90deg, rgba(255, 62, 8, 1) 0%, rgba(255, 187, 73, 1) 100%);
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 10px;
+    margin-top: 7.64px;
 }
 
 .ResultForm2{
-    width: 1234px;
+    width: 989px;
     margin: 0 auto;
     margin-top: 10px;
 }
 
 .Result2Box{
-    width: 200px;
-    height: 160px;
-    border-radius: 20px;
+    width: 159px;
+    height: 127px;
+    border-radius: 16px;
     margin-right: 10px;
     background: rgba(139, 137, 255, 0.15);
     display: inline-block;
@@ -225,38 +225,38 @@
 
 .ResultConfidenceForm{
     display: inline-block;
-    width: 604px;
-    height: 170px;
+    width: 481px;
+    height: 135px;
     text-align: center;
     background: rgba(139, 137, 255, 0.15);
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
 }
 
 .Result2Title{
     width: auto;
-    height: 24px;
+    height: 19px;
 
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
 
     color: rgba(240, 240, 240, 1);
-    margin-top: 37px;
+    margin-top: 29px;
 }
 
 .Result2Detail{
     width: auto;
-    height: 42px;
+    height: 33px;
 
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 35px;
+    font-size: 28px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -264,44 +264,43 @@
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 20px;
+    margin-top: 16.47px;
 }
 
 .ResultForm3{
-    width: 1234px;
-    height: 483px;
-    border-radius: 30px;
-    border-width: 0.71px;
+    width: 989px;
+    height: 387px;
+    border-radius: 20px;
+    border-width: 1px;
     margin: 0 auto;
     margin-top: 50px;
-    border: 0.71px solid var(--, rgba(136, 136, 136, 1));
+    border: 1px solid var(--, rgba(136, 136, 136, 1));
     background: var(--30, rgba(135, 135, 135, 0.3));
     overflow: hidden;
-
 }
 
 .Result3Title{
     width: auto;
-    height: 60px;
+    height: 48px;
 
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 100%;
     letter-spacing: 0%;
 
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 45px;
-    margin-left: 130px;
+    margin-top: 36.07px;
+    margin-left: 82px;
 }
 
 .Result3DetailForm{
-    height: 300px;
+    height: 240px;
     
-    margin-top: 30px;
+    margin-top: 21.97px;
     overflow: hidden;
 }
 
@@ -309,28 +308,28 @@
     font-family: Pretendard;
     font-weight: 400;
     font-style: Regular;
-    font-size: 35px;
-    line-height: 60px;
+    font-size: 28px;
+    line-height: 48px;
     letter-spacing: 0%;
 
     color: rgba(255, 255, 255, 1);
     display: inline-block;
-    margin-left: 130px;
+    margin-left: 82px;
 }
 
 .Result3DetailValue{
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 35px;
-    line-height: 60px;
+    font-size: 28px;
+    line-height: 48px;
     letter-spacing: 0%;
     text-align: right;
 
     color: rgba(255, 255, 255, 1);
     display: inline-block;
     float: right;
-    margin-right: 130px;
+    margin-right: 78px;
 }
 
 .ResultPOGraphTitle{
@@ -659,12 +658,12 @@
     width: 1234px;
     margin: 0 auto;
     text-align: center;
-    margin-top: 117px
+    margin-top: 120px
 }
 
 .ResultRefine{
-    width: 500px;
-    height: 77px;
+    width: 400px;
+    height: 61px;
     border-width: 3px;
     gap: 10px;
     border: 3px solid transparent;
@@ -677,8 +676,8 @@
 }
 
 .ResultRestart{
-    width: 500px;
-    height: 83px;
+    width: 400px;
+    height: 61px;
     border-radius: 100px;
     gap: 10px;
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
@@ -692,7 +691,7 @@
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
 
@@ -700,20 +699,20 @@
     background: linear-gradient(90deg, #8B89FF 0%, #73C6E4 100%);
     color: transparent;
     -webkit-background-clip: text;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
-.ResultRestartText2{
+.ResultRestartText{
     font-family: Pretendard;
     font-weight: 500;
     font-style: Medium;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
     color: rgba(240, 240, 240, 1);
 
-    margin-top: 18px;
+    margin-top: 15px;
 }
 
 .ResultSave:hover, .ResultDiscovery:hover,
